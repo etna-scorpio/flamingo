@@ -1,0 +1,58 @@
+$icons: (0:0)
+$icons: map-merge($icons,('handshake': (X: 0px, Y:0px, W: 60px, H: 51px, TW: 131px, TH: 115px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('money': (X: 0px, Y:-61px, W: 47px, H: 54px, TW: 131px, TH: 115px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('truck': (X: -70px, Y:0px, W: 61px, H: 27px, TW: 131px, TH: 115px, IMG: '../img/sprite.png')))
+
+
+// Gets an attribute from the sass map
+@function icon-attr($icon, $attr)
+  $icon: map-get($icons, $icon)
+  @return map-get($icon, $attr)
+
+@mixin sprite($iconName)
+  background-image: url(icon-attr($iconName, IMG))
+  width: icon-attr($iconName, W)
+  height: icon-attr($iconName, H)
+  background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-position($iconName)
+  background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-retina($iconName)
+  background-image: url(icon-attr($iconName, IMG))
+  $width: icon-attr($iconName, W)
+  $height: icon-attr($iconName, H)
+  width: $width/2
+  height: $height/2
+  $x: icon-attr($iconName, X)
+  $y: icon-attr($iconName, Y)
+  background-position: $x/2 $y/2
+  $tw: icon-attr($iconName, TW)   
+  $th: icon-attr($iconName, TH)
+  background-size: $tw/2 $th/2    
+
+
+@mixin s($i)
+  +sprite($i)
+@mixin sp($i)
+  +sprite-position($i)
+@mixin sr($i)
+  +sprite-retina($i)  
+
+//
+//.icon-handshake
+//  width: 60px
+//  height: 51px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px 0px
+//
+//.icon-money
+//  width: 47px
+//  height: 54px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -61px
+//
+//.icon-truck
+//  width: 61px
+//  height: 27px
+//  background-image: url('../img/sprite.png')
+//  background-position: -70px 0px
+//
