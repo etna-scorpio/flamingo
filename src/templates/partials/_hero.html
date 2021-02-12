@@ -1,0 +1,7 @@
+{% macro hero(info) %}
+<section class="hero" style="background-image: url('img/{{info.path}}.jpg')">
+  <div class="hero__title">
+    <h1 class="title-h1 title-h1--white">{{ info.title }} <span class="hero__highlight">{{ info.subtitle }}<span></h1>
+  </div>
+</section>
+{% endmacro %}
