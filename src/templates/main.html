@@ -6,7 +6,7 @@ title: Flamingo
 {% block content %}
   {{ hero.hero({
     path: 'hero-bg',
-    title: 'ЯСКРАВИЙ ВІДПОЧИНОК ЗА ДОСТУПНИМИ ЦІНАМИ',
+    title: 'Яскравий відпочинок за <br> доступними цінами',
     subtitle: 'Тури Україною та світом'
   }) }}
 
@@ -20,14 +20,12 @@ title: Flamingo
           {
             cardTitle: 'Зимові Карпати',
             cardSubtitle: 'Триденний відпочинок в Карпатах',
-            cardWaveImg: 'wave-1',
             cardPrice: '2000 грн',
             cardDate: '<span class="calendar__date">19 - 21</span> січня',
             cardDescription: 'Купання в чанах, Буковель, джипінг, дегустація'
           }, {
             cardTitle: 'Термальне Закарпаття',
             wavePosition: 'top: -45px; left: -158px',
-            cardWaveImg: 'wave-2',
             cardPrice: '2500 грн',
             cardDate: '<span class="calendar__date">27 - 28</span> січня',
             cardDescription: 'Купання в термальних басейнах, гора Тимоха, водоспад Шипіт'
@@ -35,19 +33,40 @@ title: Flamingo
           {
             cardTitle: 'Романтика Львова',
             cardSubtitle: 'До дня Святого Валентина',
-            cardWaveImg: 'wave-3',
             cardPrice: '1500 грн',
             cardDate: '<span class="calendar__date">14 - 15</span> лютого',
             cardDescription: 'Львівська ратуша, екскурсія підземеллями, романтична вечеря'
+          },
+          {
+            cardTitle: 'Хмельницький аквапарк',
+            wavePosition: 'left: -11px',
+            cardPrice: '300 грн',
+            cardDate: '<span class="calendar__date">17</span> лютого',
+            cardDescription: 'Гірки, джакузі, “повільна” річка, сауни'
+          },
+          {
+            cardTitle: 'Квітуче Закарпаття',
+            wavePosition: 'top: -45px; left: -9px',
+            cardPrice: '2300 грн',
+            cardDate: '<span class="calendar__date">15 - 16</span> лютого',
+            cardDescription: 'Цвітіння сакур, дегустація вина, чани, термальні басейни'
+          },
+          {
+            cardTitle: 'Залізний Порт',
+            cardSubtitle: 'База відпочинку “Аріна”',
+            wavePosition: 'top: -67px; left: -137px; transform: rotate(-2.89deg)',
+            cardPrice: '1950 грн',
+            cardDate: 'Виїзди <br> все літо',
+            cardDescription: 'У вартості проїзд в дві сторони, проживання 5 днів / 5 ночей, страхування, супровід'
           }
         ] %}
 
         {% for item in categoryCard %}
         <div class="category__element">
-          <div class="card">
+          <a href="#" class="card">
             <div class="card__inner">
               <div class="card__mask">
-                <img {% if item.wavePosition %}style="{{ item.wavePosition }}"{% endif %} src="img/waves/{{ item.cardWaveImg }}.svg" alt="" class="card__wave">
+                <img {% if item.wavePosition %}style="{{ item.wavePosition }}"{% endif %} src="img/waves/wave-{{ loop.index }}.svg" alt="" class="card__wave">
                 <div class="card__title">
                   <h3 class="title-h3 title-h3--white">{{ item.cardTitle }}</h3>
                   {% if item.cardSubtitle %}
@@ -59,14 +78,29 @@ title: Flamingo
                 <span class="calendar__stroke"></span>
                 {{ item.cardDate | safe }}
               </div>
-              <img class="card__pic" src="img/tour-category/{{ loop.index }}.jpg" alt="tour-category-card-{{ loop.index }}" />
+              <img class="card__pic" height="330" src="img/tour-category/{{ loop.index }}.jpg" alt="tour-category-card-{{ loop.index }}" />
               <div class="card__price">{{ item.cardPrice }}</div>
             </div>
             <div class="card__description"><span>{{ item.cardDescription }}</span></div>
-          </div>
+          </a>
         </div>
         {% endfor %}
       </div>
+    </div>
+    <div class="category__more">
+      <a href="#" class="button">Показати ще</a>
+    </div>
+  </section>
+  <section class="map">
+    <div class="map__title">
+      <div class="section-title"><h2 class="title-h2">Наша адреса</h2></div>
+    </div>
+    <div class="map__info">
+      <address class="map__address">м. Вінниця, проспект Коцюбинського, 4, офіс 15 (БЦ "Коцюбинський")</address>
+      <a href="tel: +380983615756" class="map__tel">+38 (098) 361-57-56</a>
+    </div>
+    <div class="map__location">
+      <iframe class="map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2604.9415918131044!2d28.505809214908002!3d49.23959658174474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472d5b3eb67f95cb%3A0x97e01e3398395d94!2z0L_RgNC-0YHQvy4g0JrQvtGG0Y7QsdC40L3RgdC60L7Qs9C-LCA0LCDQktC40L3QvdC40YbQsCwg0JLQuNC90L3QuNGG0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAyMTAwMA!5e0!3m2!1sru!2sua!4v1613160644708!5m2!1sru!2sua" width="1440" height="434" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
   </section>
 {% endblock %}

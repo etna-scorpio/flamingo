@@ -1,0 +1,120 @@
+.footer
+  display: flex
+  margin-top: 115px
+  background: $dark-navy
+  color: #fff
+  padding: 44px 35px 40px
+  +r(1024)
+    flex-wrap: wrap
+    justify-content: space-around
+  +r(767)
+    margin-top: 100px
+    padding: 35px 15px 50px
+  &__group
+    margin-bottom: 35px
+    flex-basis: 33%
+    padding-right: 2%
+    +r(1024)
+      flex-basis: auto
+    +r(767)
+      flex-basis: 100%
+      +r(767)
+        margin-bottom: 30px
+    &:first-child
+      flex-basis: 41%
+      padding-right: 7%
+      +r(1024)
+        flex-basis: 45%
+      +r(767)
+        flex-basis: 100%
+    &:last-child
+      flex-basis: 26%
+      margin-bottom: 0
+      padding-right: 0
+      +r(1024)
+        flex-basis: auto
+      +r(767)
+        flex-basis: 100%
+  &__logo
+    display: block
+    max-width: 220px
+    margin-bottom: 11px
+    +r(767)
+      max-width: 160px
+    img
+      max-width: 100%
+  &__title
+    margin-bottom: 15px
+    +r(767)
+      margin-bottom: 9px
+  &__tel
+    margin-bottom: 7px
+    +r(767)
+      margin-bottom: 5px
+    &:nth-of-type(2)
+      margin-bottom: 13px
+      +r(767)
+        margin-bottom: 15px
+  &__mail
+    margin-bottom: 30px
+    +r(767)
+      margin-bottom: 35px
+  &__time
+    margin-bottom: 15px
+    +r(767)
+      margin-bottom: 12px
+    &:last-child
+      margin-bottom: 0
+    span
+      vertical-align: middle
+    b
+      +proxima-sb
+  &__link
+    text-decoration: none
+    color: #fff
+    span
+      vertical-align: middle
+    &:hover
+      span
+        text-decoration: underline
+  .icon-mail,
+  .icon-phone,
+  .icon-clock
+    fill: #fff
+  .icon-phone
+    margin-right: 2px
+    vertical-align: -5px
+    font-size: 23px
+  .icon-mail
+    margin: 0 4px 0 2px
+    vertical-align: middle
+    font-size: 15px
+  .icon-clock
+    margin-right: 2px
+    vertical-align: -5px
+    font-size: 20px
+
+.social
+  display: flex
+  +r(767)
+    margin-bottom: 5px
+  &__icon
+    display: block
+    width: 30px
+    height: 30px
+    margin-right: 15px
+    background-size: contain
+    transition: transform 0.2s ease
+    will-change: transform
+    &:hover
+      transform: translateY(-3px)
+    &--messenger
+      background-image: url(../icons/social/messenger.svg)
+    &--instagram
+      background-image: url(../icons/social/instagram.svg)
+    &--telegram
+      background-image: url(../icons/social/telegram.svg)
+    &--viber
+      background-image: url(../icons/social/viber.svg)
+      background-color: #fff
+      border-radius: 50%

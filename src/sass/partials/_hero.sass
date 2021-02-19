@@ -8,15 +8,32 @@
   min-height: 685px
   background-size: cover
   background-position: 50% 35%
+  +css-lock(345, 685, 767, 1024, min-height)
+  +r(767)
+    margin-bottom: 40px
   &__title
-    max-width: 615px
+    max-width: 630px
     margin: 0 auto
     text-align: center
     text-transform: uppercase
+    font-weight: normal
     color: #fff
-  &__highlight
+    +r(767)
+      max-width: 340px
+      br
+        display: none
+  &__main
     display: block
-    padding: 5px 0
+    +r(767)
+      margin-bottom: 20px
+      text-transform: initial
+  &__highlight
+    display: inline-block
+    padding: 8px 21px
+    font-weight: normal
     background: $yellow
     color: $black
     line-height: 1.2
+    +css-lock(19, 40, 767, 1024, font-size)
+    +r(767)
+      padding: 10px 5px
