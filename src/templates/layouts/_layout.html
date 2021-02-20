@@ -15,6 +15,7 @@
   </head>
   <body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
 
+    {% include "../partials/_header.html" %}
     <!-- BEGIN content -->
     <div class="out{% if outMod %} {{ outMod }}{% endif %}">
       {% block content %}{% endblock %}

@@ -1,15 +1,18 @@
 .footer
-  display: flex
   margin-top: 115px
   background: $dark-navy
   color: #fff
   padding: 44px 35px 40px
-  +r(1024)
-    flex-wrap: wrap
-    justify-content: space-around
   +r(767)
     margin-top: 100px
     padding: 35px 15px 50px
+  &__inner
+    display: flex
+    max-width: 1920px
+    margin: 0 auto
+    +r(1024)
+      flex-wrap: wrap
+      justify-content: space-around
   &__group
     margin-bottom: 35px
     flex-basis: 33%

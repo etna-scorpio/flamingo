@@ -6,9 +6,10 @@
   margin-bottom: 85px
   padding: 30px 15px 15px
   min-height: 685px
+  background-color: #ddd
   background-size: cover
   background-position: 50% 35%
-  +css-lock(345, 685, 767, 1024, min-height)
+  +css-lock(345, 685, 767, 1200, min-height)
   +r(767)
     margin-bottom: 40px
   &__title
@@ -24,8 +25,8 @@
         display: none
   &__main
     display: block
-    +r(767)
-      margin-bottom: 20px
+    +r(1024)
+      margin-bottom: 15px
       text-transform: initial
   &__highlight
     display: inline-block
@@ -34,6 +35,6 @@
     background: $yellow
     color: $black
     line-height: 1.2
-    +css-lock(19, 40, 767, 1024, font-size)
+    +css-lock(19, 40, 767, 1200, font-size)
     +r(767)
       padding: 10px 5px
