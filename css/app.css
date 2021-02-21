@@ -597,16 +597,16 @@ body {
   transform: translateY(-3px);
 }
 .social__icon--messenger {
-  background-image: url(../icons/social/messenger.svg);
+  background-image: url(../icons/messenger.svg);
 }
 .social__icon--instagram {
-  background-image: url(../icons/social/instagram.svg);
+  background-image: url(../icons/instagram.svg);
 }
 .social__icon--telegram {
-  background-image: url(../icons/social/telegram.svg);
+  background-image: url(../icons/telegram.svg);
 }
 .social__icon--viber {
-  background-image: url(../icons/social/viber.svg);
+  background-image: url(../icons/viber.svg);
   background-color: #fff;
   border-radius: 50%;
 }
