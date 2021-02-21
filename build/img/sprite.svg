@@ -9,6 +9,10 @@
         <path class="cls-1" d="M16 31a15 15 0 1 1 15-15 15 15 0 0 1-15 15zm0-28a13 13 0 1 0 13 13A13 13 0 0 0 16 3z"/>
         <path class="cls-1" d="M20.24 21.66l-4.95-4.95A1 1 0 0 1 15 16V8h2v7.59l4.66 4.65z"/>
     </g>
+</symbol><symbol id="icon-hamburger" viewBox="0 0 20 15">
+    <path d="M0 .5h20"/>
+    <path d="M0 7.5h20"/>
+    <path d="M0 14.5h20"/>
 </symbol><symbol id="icon-mail" viewBox="0 0 21 15">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M10.385 8.96L20.121.634H.649l9.736 8.324zm-2.63-.922l2.63 2.13 2.588-2.13 7.148 6.044H.649l7.106-6.044zM0 13.442V1.275l7.14 6.083L0 13.442zm20.77 0V1.275l-7.14 6.083 7.14 6.084z"/>
 </symbol><symbol id="icon-phone" viewBox="0 0 139 139">
