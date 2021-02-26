@@ -1,0 +1,59 @@
+.modal
+  opacity: 0
+  visibility: hidden
+  transition: opacity 0.2s ease, visibility 0.2s ease
+  &.is-active
+    +rhmin(400)
+      opacity: 1
+      visibility: visible
+    +r(767)
+    .modal__overlay
+      opacity: 1
+      visibility: visible
+  &__overlay
+    position: fixed
+    z-index: 20
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: rgba($dark-navy, 0.5)
+    opacity: 0
+    visibility: hidden
+  &__block
+    position: fixed
+    z-index: 20
+    right: 20px
+    bottom: 20px
+    width: 340px
+    padding: 0 10px
+    text-align: center
+    will-change: transform
+    +r(767)
+      right: 50%
+      bottom: 50%
+      max-width: 320px
+      margin-right: -160px
+      transform: translateY(50%)
+  &__inner
+    position: relative
+    padding: 20px 10px 25px
+    background: $yellow
+  &__title
+    margin-bottom: 12px
+  &__subtitle
+    margin-bottom: 10px
+    +proxima-sb
+  &__text
+    margin-bottom: 20px
+  &__close
+    position: absolute
+    top: 10px
+    right: 10px
+    font-size: 19px
+    background: none
+    &:hover
+      .icon
+        fill: $red
+    .icon
+      fill: $dark-brown

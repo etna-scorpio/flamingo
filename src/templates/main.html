@@ -1,10 +1,14 @@
 ---
 title: Flamingo
+modal: true
+activeHeaderLink: 'Закарпаття'
+fixedButton: true
 ---
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
   {{ hero.hero({
+    heroClass: 'js-hero',
     path: 'hero-bg',
     title: 'Яскравий відпочинок за <br> доступними цінами',
     subtitle: 'Тури Україною та світом'

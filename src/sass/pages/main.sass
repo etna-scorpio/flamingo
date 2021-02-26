@@ -1,14 +1,14 @@
 .category
   padding: 0 15px
-  margin-bottom: 120px
+  margin-bottom: rem(120)
   +r(1024)
-    margin-bottom: 65px
+    margin-bottom: rem(65)
   +r(767)
-    margin-bottom: 40px
+    margin-bottom: remMob(40)
   &__title
-    margin-bottom: 65px
+    margin-bottom: rem(65)
     +r(767)
-      margin-bottom: 40px
+      margin-bottom: remMob(40)
   &__inner
     max-width: 1160px
     margin: 0 auto 25px
@@ -97,14 +97,14 @@
     text-align: center
     background: $yellow
     +proxima-b
-    font-size: 23px
+    font-size: rem(23)
     line-height: 1
     +r(1024)
       min-width: 115px
       padding: 13px 20px
-      font-size: 20px
+      font-size: rem(20)
     +r(767)
-      font-size: 18px
+      font-size: remMob(18)
   &__description
     position: relative
     display: flex
@@ -113,7 +113,7 @@
     padding: 5px 14px
     span
       display: inline-block
-      max-height: 50px
+      max-height: rem(50)
       overflow: hidden
     +r(767)
       height: auto
@@ -143,9 +143,9 @@
   &__date
     display: block
     +proxima-sb
-    font-size: 18px
+    font-size: rem(18)
     +r(767)
-      font-size: 15px
+      font-size: remMob(15)
   &__stroke
     position: absolute
     top: -7px

@@ -31,7 +31,7 @@
           <nav class="menu">
             <li class="menu__item"><a href="#" class="menu__link">Всі тури</a></li>
             <li class="menu__item"><a href="#" class="menu__link">Карпати</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">Закарпаття</a></li>
+            <li class="menu__item"><a href="#" class="menu__link menu__link--active">Закарпаття</a></li>
             <li class="menu__item"><a href="#" class="menu__link">Чорне море</a></li>
             <li class="menu__item"><a href="#" class="menu__link">Азовське море</a></li>
             <li class="menu__item"><a href="#" class="menu__link">Львів</a></li>
@@ -50,11 +50,11 @@
     </header>
     <!-- BEGIN content -->
     <div class="out">
-      <section class="hero" style="background-image: url('img/hero-bg.jpg')">
+      <section class="hero js-hero" style="background-image: url('img/hero-bg.jpg')">
         <div class="hero__title">
           <h1 class="title-h1 title-h1--white">
             <span class="hero__main">Яскравий відпочинок за <br> доступними цінами</span>
-            <span class="hero__highlight">Тури Україною та світом<span>
+            <span class="hero__highlight">Тури Україною та світом</span>
           </h1>
         </div>
       </section>
@@ -232,8 +232,8 @@
           <div class="social">
             <a href="https://www.facebook.com/More.Vinnytsia/?ref=page_internal"><i class="social__icon social__icon--messenger"></i></a>
             <a href="https://www.instagram.com/flamingovinnitsia/"><i class="social__icon social__icon--instagram"></i></a>
-            <a href="#"><i class="social__icon social__icon--telegram"></i></a>
-            <a href="viber://chat/?number=+380983615756"><i class="social__icon social__icon--viber"></i></a>
+            <a href="tg://resolve?domain=flamingovn"><i class="social__icon social__icon--telegram"></i></a>
+            <a href="viber://chat?number=380983615756"><i class="social__icon social__icon--viber"></i></a>
           </div>
         </div>
         <div class="footer__group">
@@ -253,6 +253,33 @@
         </div>
       </div>
     </footer>
+    <div class="modal js-modal">
+      <div class="modal__overlay"></div>
+      <div class="modal__block">
+        <div class="modal__inner">
+          <button class="modal__close js-close-modal">
+            <svg class="icon icon-close">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+          <div class="modal__title">
+            <h5 class="title-h5">Тур в Залізний Порт <br> 4 вересня на 5 днів</h5>
+          </div>
+          <p class="modal__subtitle">Вартість на 2-х всього 4100 грн</p>
+          <p class="modal__text">У вартість входить: проїзд автобусом туристичного класу, проживання, страхування!</p>
+          <a href="#" class="button">Дізнатися більше</a>
+        </div>
+      </div>
+    </div>
+    <div class="fixed-button js-fixed-button">
+      <div class="fixed-button__circle">
+        <a href="https://www.facebook.com/More.Vinnytsia/?ref=page_internal" class="fixed-button__social"><i class="fixed-button__icon fixed-button__icon--messenger"></i></a>
+        <a href="https://www.instagram.com/flamingovinnitsia/" class="fixed-button__social"><i class="fixed-button__icon fixed-button__icon--instagram"></i></a>
+        <a href="tg://resolve?domain=flamingovn" class="fixed-button__social"><i class="fixed-button__icon fixed-button__icon--telegram"></i></a>
+        <a href="viber://chat?number=380983615756" class="fixed-button__social"><i class="fixed-button__icon fixed-button__icon--viber"></i></a>
+      </div>
+      <div class="fixed-button__text js-fixed-button-circle"><span>Написати нам</span></div>
+    </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
     <script type="text/javascript" src="js/app.js"></script>

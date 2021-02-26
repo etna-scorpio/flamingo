@@ -21,6 +21,8 @@
       {% block content %}{% endblock %}
     </div>
     {% include "../partials/_footer.html" %}
+    {% if modal %} {% include "../partials/_modal.html" %} {% endif %}
+    {% if fixedButton %} {% include "../partials/_fixed-button.html" %} {% endif %}
     <!-- END content -->
 
     <!-- BEGIN scripts -->

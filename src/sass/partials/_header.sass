@@ -29,7 +29,7 @@
           display: none
         &:hover,
         &:focus,
-        &:active
+        &--active
           color: $blue
     .language
       color: $dark-brown
@@ -53,7 +53,7 @@
     .menu .menu__link
       &:hover,
       &:focus,
-      &:active
+      &--active
         color: $yellow
       &:before
         background: $yellow
@@ -66,6 +66,11 @@
     padding-top: 20px
     background: #fff
     transform: translateY(0)
+    .menu .menu__link
+      &:hover,
+      &:focus,
+      &.menu__link--active
+        color: $blue
     .logo svg path
       &:first-child
         fill: $dark-brown
@@ -94,9 +99,8 @@
   &__group
     display: flex
     +r(1200)
-      font-size: 16px
+      font-size: rem(16)
     +r(1024)
-      display: none
       position: absolute
       top: 100%
       background: #fff
@@ -106,8 +110,12 @@
       justify-content: space-between
       align-items: center
       padding: 20px 0
+      visibility: hidden
+      opacity: 0
+      transition: visibility 0.1s ease-in, opacity 0.1s ease-in
       &.is-active
-        display: flex
+        visibility: visible
+        opacity: 1
   &__button
     display: none
     margin-right: 15px
@@ -166,7 +174,7 @@
       transition: opacity 0.3s ease, transform 0.2s ease-in
     &:hover,
     &:focus,
-    &:active
+    &--active
       color: $blue
       &:before
         opacity: 1
