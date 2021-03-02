@@ -55,10 +55,17 @@ body
 
 .title-h3
   font-size: rem(30)
-  +css-lock(1.222, 1.66, 42, 66, font-size, rem)
+  +r(1024)
+    font-size: rem(26)
+  +r(767)
+    font-size: remMob(21)
 
 .title-h4
   font-size: rem(25)
+  +r(1024)
+    font-size: 22px
+  +r(767)
+    font-size: 18px
 
 .title-h5
   font-size: rem(20)

@@ -49,6 +49,9 @@
     .menu .menu__link,
     .language
       color: #fff
+    .language
+      &:before
+        background: #fff
   &--accent-yellow
     .menu .menu__link
       &:hover,
@@ -193,18 +196,23 @@
     width: 1px
     height: 25px
     margin-left: -0.5px
-    background: #fff
+    background: $dark-brown
     +r(1200)
       top: 1px
       height: 20px
   &__switch
     cursor: pointer
+    &:hover,
+    &:focus
+      color: $blue
     &:first-child
       margin-right: 25px
       +r(1200)
         margin-right: 11px
       +r(1024)
         margin-right: 15px
+    &.is-active
+      color: $blue
 
 .hamburger
   display: none

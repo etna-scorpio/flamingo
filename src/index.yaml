@@ -3,3 +3,5 @@ ProjectTitle: flamingo
 PageList:
   - file: main.html
     ready: 100
+  - file: tour.html
+    ready: 100

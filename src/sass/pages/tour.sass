@@ -1,0 +1,237 @@
+.main
+  display: flex
+  max-width: 1270px
+  margin: 85px auto 115px
+  padding: 0 15px
+  +r(767)
+    flex-wrap: wrap
+    overflow-x: hidden
+
+.sidebar
+  width: 100%
+  max-width: 246px
+  margin-right: 24px
+  +r(767)
+    max-width: 100%
+
+.content
+  flex-basis: 100%
+  &.content--subtitle-orange
+    h4
+      color: #FE7B4D
+    hr
+      border-color: #FE7B4D
+  section
+    margin-bottom: 65px
+    &:last-child
+      margin-bottom: 0
+    +r(767)
+      margin-bottom: 40px
+    > div
+      &:not(.collapse)
+        margin-bottom: 55px
+        &:last-child
+          margin-bottom: 0
+        +r(767)
+          margin-bottom: 40px
+  h2, h3, h4, h5
+    +ib
+  h2
+    margin-bottom: 52px
+    text-align: center
+    font-size: rem(35)
+    +ib
+    color: $black
+    +r(1024)
+      font-size: rem(30)
+    +r(767)
+      font-size: remMob(23)
+  h3
+    text-align: center
+    font-size: rem(30)
+    margin-bottom: 35px
+    span
+      position: relative
+      display: inline-block
+      &:after
+        content: ""
+        display: block
+        margin-top: 2px
+        height: 1px
+        border-bottom: 1px solid currentColor
+    +r(1024)
+      font-size: rem(26)
+    +r(767)
+      margin-bottom: 25px
+      font-size: remMob(21)
+  h4
+    margin-bottom: 30px
+    text-align: center
+    font-size: rem(25)
+    +r(1024)
+      font-size: 22px
+    +r(767)
+      margin-bottom: 32px
+      font-size: 18px
+  h5
+    font-size: rem(20)
+  hr
+    display: none
+    border: 0
+    margin: -28px -15px 32px
+    border-bottom: 1px dashed $dark-brown
+    +r(767)
+      display: block
+  p
+    margin-bottom: 19px
+    &:last-child
+      margin-bottom: 0
+  figure
+    display: flex
+    margin: 30px -5px
+    +r(767)
+      margin: 30px -18px
+    > div
+      position: relative
+      flex-basis: 100%
+      margin: 0 5px
+      padding-bottom: 33.5%
+      &:only-child
+        padding-bottom: 30.92%
+      +r(1024)
+        padding-bottom: 40%
+        &:only-child
+          padding-bottom: 35%
+      +r(767)
+        margin: 0 3px
+    img
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      display: block
+      width: 100%
+      height: 100%
+      object-fit: cover
+      font-size: 'object-fit: cover'
+      background-color: #aaa
+    + figure
+      margin-top: -20px
+      +r(767)
+        margin-top: -23px
+  a[href^="tel:"]
+    text-decoration: none
+    font-size: rem(20)
+    +proxima-sb
+    color: $dark-brown
+    border-bottom: 1px solid transparent
+    &:hover,
+    &:focus
+      border-bottom-color: currentColor
+  .table
+    border-collapse: collapse
+    margin: 45px 0
+    &--layout-fixed
+      table-layout: fixed
+    th
+      +proxima-sb
+      background: $yellow
+      color: $dark-navy
+    th, td
+      padding: 13px 10px
+      border: 1px solid $dark-navy
+      text-align: center
+    .cell
+      &--text-left
+        text-align: left
+      &--set-w
+        width: 240px
+        +r(1024)
+          width: auto
+      &--with-icon
+        position: relative
+        div
+          position: absolute
+          top: 50%
+          right: 20%
+          color: $blue
+          transform: translateY(-50%)
+          +r(1024)
+            display: none
+        svg
+          vertical-align: middle
+          font-size: 17px
+          fill: $blue
+        span
+          vertical-align: middle
+    + .notes
+      margin: -25px 0 40px
+  .time
+    position: relative
+    margin-bottom: 25px
+    padding-left: 15px
+    +proxima-it
+    &:before
+      content: ''
+      position: absolute
+      top: -8px
+      left: 0
+      width: 5px
+      height: 38px
+      background: $yellow
+    b
+      +proxima-sb
+      color: $black
+  .notes
+    p
+      margin-bottom: 0
+    b
+      +proxima-sb
+      color: $red
+  .list-group
+    display: flex
+    margin: 0 -10px
+    +r(1024)
+      flex-wrap: wrap
+    div
+      margin: 0 10px
+      padding: 25px 10px 25px 15px
+      border: 3px solid $yellow
+      &:first-child
+        flex-basis: 62%
+        ul li
+          &:before
+            background-image: url(../icons/checkmark-blue.svg)
+      &:last-child
+        flex-basis: 38%
+      +r(1024)
+        margin-bottom: 20px
+        &:first-child,
+        &:last-child
+          flex-basis: 100%
+    b
+      display: block
+      margin-bottom: 16px
+      +proxima-sb
+    ul li
+      position: relative
+      margin-bottom: 10px
+      padding-left: 29px
+      &:before
+        content: ''
+        position: absolute
+        top: 7px
+        left: 0
+        width: 17px
+        height: 11px
+        background-image: url(../icons/checkmark-pink.svg)
+        background-size: contain
+        background-repeat: no-repeat
+      &:last-child
+        margin-bottom: 0
+  .button
+    display: block
+    max-width: 209px
+    margin: 45px auto 0
+

@@ -15,10 +15,8 @@
   +r(767)
     margin-bottom: 40px
   &__title
-    max-width: 630px
     margin: 0 auto
     text-align: center
-    text-transform: uppercase
     font-weight: normal
     color: #fff
     +r(767)
@@ -27,11 +25,14 @@
         display: none
   &__main
     display: block
+    max-width: rem(800)
+    margin-bottom: 5px
     +r(1024)
       margin-bottom: 15px
-      text-transform: initial
   &__highlight
     display: inline-block
+    max-width: rem(630)
+    text-transform: uppercase
     padding: 8px 21px
     font-weight: normal
     background: $yellow
