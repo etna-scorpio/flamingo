@@ -16,10 +16,43 @@ fixedButton: true
 
 
 <main class="main">
-  <div class="sidebar"></div>
+  <div class="main__title">
+    <h2 class="title-h2">Триденний екскурсійний тур “Зимові Карпати</h2>
+  </div>
+  <div class="sidebar">
+    <div class="sidebar__inner">
+      <div class="sidebar__group">
+        <div class="sidebar__title">
+          <h5 class="title-h5 title-h5--uppercase">Дата туру</h5>
+        </div>
+        <div class="sidebar__date">
+          <p>13 січня 23:00 - 21 січня 03:00</p>
+          <div class="sidebar__note">
+            <span>час виїзду</span>
+            <span>час приїзду</span>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="sidebar__group sidebar__group--more-mb">
+        <div class="sidebar__title">
+          <h5 class="title-h5 title-h5--uppercase">Тривалість туру</h5>
+        </div>
+        <p>3 дні / 2 ночі</p>
+      </div>
+      <div class="sidebar__button">
+        <a href="#" class="button button--equal-padding button--full-w">Залишити заявку</a>
+      </div>
+      <ul class="sidebar__list">
+        <li class="sidebar__option"><a href="#visit" class="sidebar__link is-active js-sidebar-link">Що відвідаємо</a></li>
+        <li class="sidebar__option"><a href="#price" class="sidebar__link js-sidebar-link">Вартість туру</a></li>
+        <li class="sidebar__option"><a href="#program" class="sidebar__link js-sidebar-link">Програма туру</a></li>
+      </ul>
+    </div>
+  </div>
   <section class="content content--subtitle-orange">
     <h2>Триденний екскурсійний тур “Зимові Карпати”</h2>
-    <section>
+    <section id="visit">
       <div>
         <h3><span>Що відвідаємо</span></h3>
         <h4>День 1: Стежки Довбуша</h4>
@@ -54,7 +87,7 @@ fixedButton: true
         <p>Кажуть, що раніше Пробій був могутнішим, але щоб вільно сплавляти ліс по річці, його підірвали і він став значно нижчим. Зробити селфі на фоні водоспаду можна з містка, або спустившись безпосередньо до самого кам’янистого узбережжя.</p>
       </div>
     </section>
-    <section>
+    <section id="price">
       <div>
         <h3><span>Вартість туру</span></h3>
         <p>Вартість туру розрахована на 1 дорослого виїздом з Вінниці.  Вартість туру з інших міст уточняйте, будь ласка, у менеджера за телефоном <a href="tel: +380983615756">+38 (098) 361 57 56</a>.</p>
@@ -117,8 +150,9 @@ fixedButton: true
           </div>
         </div>
       </div>
+      <a href="#" class="button button--full-w button--mob">Залишити заявку</a>
     </section>
-    <section>
+    <section id="program">
       <h3><span>Програма туру</span></h3>
 
       {% set collapseItems = [{

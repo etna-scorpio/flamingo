@@ -4,5 +4,6 @@ import './partials/_mobile-menu';
 import './partials/_modal';
 import './partials/_fixed-button';
 import './partials/_collapse';
+import './partials/_sidebar';
 
 objectFitImages();

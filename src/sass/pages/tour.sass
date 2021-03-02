@@ -5,14 +5,17 @@
   padding: 0 15px
   +r(767)
     flex-wrap: wrap
+    margin: 40px auto 100px
     overflow-x: hidden
+  &__title
+    display: none
+    text-align: center
+    margin-bottom: 30px
+    flex-basis: 100%
+    +r(767)
+      display: block
 
-.sidebar
-  width: 100%
-  max-width: 246px
-  margin-right: 24px
-  +r(767)
-    max-width: 100%
+
 
 .content
   flex-basis: 100%
@@ -45,7 +48,7 @@
     +r(1024)
       font-size: rem(30)
     +r(767)
-      font-size: remMob(23)
+      display: none
   h3
     text-align: center
     font-size: rem(30)
@@ -104,6 +107,9 @@
           padding-bottom: 35%
       +r(767)
         margin: 0 3px
+        padding-bottom: 48.16%
+        &:only-child
+          padding-bottom: 55.215%
     img
       position: absolute
       top: 0
@@ -119,7 +125,7 @@
     + figure
       margin-top: -20px
       +r(767)
-        margin-top: -23px
+        margin-top: -24px
   a[href^="tel:"]
     text-decoration: none
     font-size: rem(20)
@@ -129,9 +135,14 @@
     &:hover,
     &:focus
       border-bottom-color: currentColor
+    +r(767)
+      font-size: rem(17)
   .table
     border-collapse: collapse
     margin: 45px 0
+    +r(767)
+      margin: 27px 0
+      font-size: rem(15)
     &--layout-fixed
       table-layout: fixed
     th
@@ -142,6 +153,8 @@
       padding: 13px 10px
       border: 1px solid $dark-navy
       text-align: center
+      +r(767)
+        padding: 10px 5px
     .cell
       &--text-left
         text-align: left
@@ -167,6 +180,8 @@
           vertical-align: middle
     + .notes
       margin: -25px 0 40px
+      +r(767)
+        margin: -10px 0 27px
   .time
     position: relative
     margin-bottom: 25px
@@ -180,6 +195,9 @@
       width: 5px
       height: 38px
       background: $yellow
+      +r(767)
+        top: -5px
+        height: 30px
     b
       +proxima-sb
       color: $black
@@ -205,11 +223,14 @@
             background-image: url(../icons/checkmark-blue.svg)
       &:last-child
         flex-basis: 38%
+        margin-bottom: 0
       +r(1024)
         margin-bottom: 20px
         &:first-child,
         &:last-child
           flex-basis: 100%
+      +r(767)
+        padding: 20px 10px 20px 15px
     b
       display: block
       margin-bottom: 16px
@@ -233,5 +254,13 @@
   .button
     display: block
     max-width: 209px
-    margin: 45px auto 0
+    margin: 40px auto 0
+    padding: 13px
+    text-align: center
+    +r(767)
+      max-width: 320px
+    &--mob
+      display: none
+      +r(767)
+        display: block
 

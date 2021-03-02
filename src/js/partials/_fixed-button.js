@@ -7,7 +7,6 @@ function toggleCircleVisibility() {
 }
 
 function hideCircle(e) {
-  console.log(e.target.closest('.js-fixed-button') === fixedButtonParent);
   if (e.target.closest('.js-fixed-button') !== fixedButtonParent) {
     fixedButtonParent.classList.remove(activeClass);
   }

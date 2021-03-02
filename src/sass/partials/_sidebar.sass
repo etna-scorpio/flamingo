@@ -1,0 +1,55 @@
+.sidebar
+  text-align: center
+  margin: 90px 24px 0 0
+  width: 100%
+  max-width: 246px
+  +r(767)
+    max-width: 100%
+  +r(767)
+    margin: 0 0 45px
+  &__title
+    margin-bottom: 7px
+  &__date
+    margin-bottom: 2px
+  &__note
+    display: flex
+    justify-content: space-between
+    font-size: rem(14)
+    +proxima-it
+  &__group
+    margin: 0 auto 25px
+    +r(767)
+      max-width: 220px
+    &--more-mb
+      margin-bottom: 35px
+  &__button
+    max-width: 200px
+    margin: 0 auto 30px
+    +r(767)
+      max-width: 320px
+  &__list
+    max-width: 200px
+    margin: 0 auto
+    +r(767)
+      max-width: 320px
+  &__option
+    margin-bottom: 7px
+  &__link
+    display: block
+    padding: 7px 11px
+    text-decoration: none
+    text-align: left
+    +proxima-sb
+    color: $black
+    border: 1px solid $blue
+    border-radius: 5px
+    &:hover,
+    &:focus,
+    &.is-active
+      background: $blue
+      color: #fff
+  hr
+    margin: 25px auto 35px
+    width: 74px
+    border: 0
+    border-bottom: 3px solid $yellow
