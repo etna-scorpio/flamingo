@@ -3,10 +3,19 @@
   margin: 90px 24px 0 0
   width: 100%
   max-width: 246px
+  // outline: 4px solid red
   +r(767)
     max-width: 100%
-  +r(767)
     margin: 0 0 45px
+  &__inner
+    &.is-absolute
+      position: absolute
+      +r(767)
+        position: static
+    &.is-fixed
+      position: fixed
+      +r(767)
+        position: static
   &__title
     margin-bottom: 7px
   &__date
@@ -34,6 +43,8 @@
       max-width: 320px
   &__option
     margin-bottom: 7px
+    &:last-child
+      margin-bottom: 0
   &__link
     display: block
     padding: 7px 11px

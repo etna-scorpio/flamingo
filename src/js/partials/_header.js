@@ -24,7 +24,7 @@ var switchHeader = function() {
   }
 };
 
-window.addEventListener('load', function() {
+window.addEventListener('DOMContentLoaded', function() {
   switchHeader();
 });
 
