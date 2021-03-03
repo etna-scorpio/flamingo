@@ -9,7 +9,7 @@
 </symbol><symbol id="icon-checkmark-pink" viewBox="0 0 19 14">
     <path d="M17.591 1L6.123 12 .91 7" stroke-width="2" stroke-miterlimit="10"/>
 </symbol><symbol id="icon-checkmark" viewBox="0 0 24 24">
-    <path clip-rule="evenodd" fill-rule="evenodd" stroke-miterlimit="10" stroke-width="2" d="M20 6L9 17l-5-5"/>
+    <path clip-rule="evenodd" stroke-miterlimit="10" stroke-width="2" d="M20 6L9 17l-5-5"/>
 </symbol><symbol id="icon-clock" viewBox="0 0 32 32">
     
     <title/>

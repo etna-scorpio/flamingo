@@ -42,7 +42,8 @@
   h2
     margin-bottom: 52px
     text-align: center
-    font-size: rem(35)
+    // font-size: rem(35)
+    font-size: rem(33)
     +ib
     color: $black
     +r(1024)
@@ -51,7 +52,8 @@
       display: none
   h3
     text-align: center
-    font-size: rem(30)
+    // font-size: rem(30)
+    font-size: rem(27)
     margin-bottom: 35px
     span
       position: relative
@@ -62,22 +64,24 @@
         margin-top: 2px
         height: 1px
         border-bottom: 1px solid currentColor
-    +r(1024)
-      font-size: rem(26)
+    // +r(1024)
+    //   font-size: rem(26)
     +r(767)
       margin-bottom: 25px
       font-size: remMob(21)
   h4
     margin-bottom: 30px
     text-align: center
-    font-size: rem(25)
-    +r(1024)
-      font-size: 22px
+    font-size: rem(23)
+    // font-size: rem(25)
+    // +r(1024)
+    //   font-size: 22px
     +r(767)
       margin-bottom: 32px
       font-size: 18px
   h5
-    font-size: rem(20)
+    // font-size: rem(20)
+    font-size: rem(19)
   hr
     display: none
     border: 0
@@ -87,6 +91,8 @@
       display: block
   p
     margin-bottom: 19px
+    +r(767)
+      text-align: justify
     &:last-child
       margin-bottom: 0
   figure
@@ -217,12 +223,12 @@
       padding: 25px 10px 25px 15px
       border: 3px solid $yellow
       &:first-child
-        flex-basis: 62%
+        flex-basis: 50%
         ul li
           &:before
             background-image: url(../icons/checkmark-blue.svg)
       &:last-child
-        flex-basis: 38%
+        flex-basis: 50%
         margin-bottom: 0
       +r(1024)
         margin-bottom: 20px
