@@ -4,7 +4,7 @@
   margin: 85px auto 115px
   padding: 0 15px
   +r(767)
-    flex-wrap: wrap
+    display: block
     margin: 40px auto 100px
     overflow-x: hidden
   &__title
@@ -14,7 +14,6 @@
     flex-basis: 100%
     +r(767)
       display: block
-
 
 
 .content
@@ -40,7 +39,8 @@
   h2, h3, h4, h5
     +ib
   h2
-    margin-bottom: 52px
+    // margin-bottom: 52px
+    margin-bottom: 40px
     text-align: center
     // font-size: rem(35)
     font-size: rem(33)
@@ -97,23 +97,25 @@
       margin-bottom: 0
   figure
     display: flex
-    margin: 30px -5px
+    flex-wrap: wrap
+    margin: 30px -10px 30px 0
     +r(767)
-      margin: 30px -18px
+      margin: 30px -23px
     > div
       position: relative
-      flex-basis: 100%
-      margin: 0 5px
-      padding-bottom: 33.5%
+      flex-basis: 50%
+      margin-bottom: 10px
+      padding: 0 5px 33.5%
+      overflow: hidden
       &:only-child
+        flex-basis: 100%
         padding-bottom: 30.92%
       +r(1024)
         padding-bottom: 40%
         &:only-child
           padding-bottom: 35%
       +r(767)
-        margin: 0 3px
-        padding-bottom: 48.16%
+        padding: 0 3px 48.16%
         &:only-child
           padding-bottom: 55.215%
     img
@@ -123,15 +125,17 @@
       right: 0
       bottom: 0
       display: block
-      width: 100%
+      width: calc(100% - 10px)
       height: 100%
       object-fit: cover
       font-size: 'object-fit: cover'
       background-color: #aaa
-    + figure
-      margin-top: -20px
       +r(767)
-        margin-top: -24px
+        width: calc(100% - 6px)
+    + figure
+      margin-top: -30px
+      +r(767)
+        margin-top: -34px
   a[href^="tel:"]
     text-decoration: none
     font-size: rem(20)
@@ -148,25 +152,38 @@
     margin: 45px 0
     +r(767)
       margin: 27px 0
-      font-size: rem(15)
+      font-size: rem(14)
     &--layout-fixed
       table-layout: fixed
     th
       +proxima-sb
       background: $yellow
       color: $dark-navy
+      +r(767)
+        vertical-align: middle
+        font-size: rem(12)
     th, td
       padding: 13px 10px
       border: 1px solid $dark-navy
       text-align: center
       +r(767)
         padding: 10px 5px
+    th small
+      display: block
+    td[colspan]
+      padding: 5px
+      +proxima-sb
+      background: $yellow
     .cell
       &--text-left
         text-align: left
-      &--set-w
+      &--set-w-240
         width: 240px
         +r(1024)
+          width: auto
+      &--set-w-120
+        width: 120px
+        +r(767)
           width: auto
       &--with-icon
         position: relative
@@ -230,6 +247,8 @@
       &:last-child
         flex-basis: 50%
         margin-bottom: 0
+      &:only-child
+        flex-basis: 100%
       +r(1024)
         margin-bottom: 20px
         &:first-child,
@@ -237,9 +256,9 @@
           flex-basis: 100%
       +r(767)
         padding: 20px 10px 20px 15px
-    b
-      display: block
+    p
       margin-bottom: 16px
+    b
       +proxima-sb
     ul li
       position: relative

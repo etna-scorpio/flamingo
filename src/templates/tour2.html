@@ -1,0 +1,229 @@
+---
+title: Flamingo
+modal: true
+activeHeaderLink: 'Карпати'
+fixedButton: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {{ hero.hero({
+    heroClass: 'js-hero',
+    path: 'hero-bg3',
+    subtitle: 'база відпочинку “АрінА” з басейном',
+    subtitleClass: 'hero__highlight--padding'
+  }) }}
+
+<main class="main">
+  <div class="main__title">
+    <h2 class="title-h2">ЗАЛІЗНИЙ ПОРТ <br> База відпочинку "Аріна"</h2>
+  </div>
+  <div class="sidebar js-sidebar">
+    <div class="sidebar__inner js-sidebar-inner">
+      <ul class="sidebar__list">
+        <li class="sidebar__option"><a href="#desc" class="sidebar__link is-active js-sidebar-link">Опис бази відпочинку</a></li>
+        <li class="sidebar__option"><a href="#room" class="sidebar__link js-sidebar-link">Категорії номерів</a></li>
+        <li class="sidebar__option"><a href="#catering" class="sidebar__link js-sidebar-link">Харчування</a></li>
+        <li class="sidebar__option"><a href="#schedule" class="sidebar__link js-sidebar-link">Дати виїздів</a></li>
+        <li class="sidebar__option"><a href="#transport" class="sidebar__link js-sidebar-link">Транспорт</a></li>
+      </ul>
+      <div class="sidebar__button">
+        <a href="#" class="button button--equal-padding button--full-w">Залишити заявку</a>
+      </div>
+    </div>
+  </div>
+  <section class="content content--subtitle-orange">
+    <h2>ЗАЛІЗНИЙ ПОРТ <br> База відпочинку "Аріна"</h2>
+    <section id="desc">
+      <div>
+        <h3><span>Опис бази відпочинку</span></h3>
+        <p>Це затишна база відпочинку з просторою озелененою територією. Гості можуть користуватися відкритим басейном, поряд з яким розташувалися лежаки. На подвір'ї готелю є зона відпочинку з бесідками та мангалом. Діти можуть гратися на облаштованому майданчику з гірками та гойдалкою. Також є кухня для самостійного готування їжі з усім необхідним приладдям, холодильником, електрочайниками.</p>
+        <p>У готелі облаштована крита їдальня на свіжому повітрі, є міні-бар. За додаткову плату можна замовити триразове харчування (1000 грн/особа за 5 днів). База відпочинку розташована на 3-й береговій лінії, до моря – 800 м (15 хв ходьби).</p>
+        <p>Є номери трьох класів: економ, економ покращений, стандарт.</p>
+        <div class="collage">
+          <div class="collage__row collage__row--three-pics">
+            <div class="collage__bl">
+              <div class="collage__el"><img src="img/tour-2/1.jpg" alt="tour 2"></div>
+            </div>
+            <div class="collage__bl">
+              <div class="collage__el"><img src="img/tour-2/2.jpg" alt="tour 2"></div>
+              <div class="collage__el"><img src="img/tour-2/3.jpg" alt="tour 2"></div>
+            </div>
+          </div>
+          <div class="collage__row">
+            <div class="collage__bl">
+              <div class="collage__el"><img src="img/tour-2/4.jpg" alt="4"></div>
+              <div class="collage__el"><img src="img/tour-2/5.jpg" alt="5"></div>
+              <div class="collage__el"><img src="img/tour-2/6.jpg" alt="6"></div>
+              <div class="collage__el">
+                <img src="img/tour-2/7.jpg" alt="7">
+                <div class="collage__num"><span>+</span>2 фото</div>
+              </div>
+            </div>
+          </div>
+          <div class="collage__slider-mob">
+            <div class="js-mob-slider">
+              {% for i in range(1, 8) %}
+                <img src="img/tour-2/{{ i }}.jpg" alt="tour 2">
+              {% endfor %}
+            </div>
+            <div class="collage__slider-count js-mob-slider-count">
+              <span class="js-mob-slider-current-slide">1</span> / <span class="js-mob-slider-total-slides"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="room">
+      <div>
+        <h3><span>Номер "економ"</span></h3>
+        <p>Комплектація номера: у номері є всі необхідні меблі, постіль на ліжках. Туалет і душ – спільний на території. Користування басейном та кухнею безкоштовне.</p>
+        <p>Номери "економ" є 2-х, 3-х і 4-місні.</p>
+        <div class="collage">
+          <div class="collage__row collage__row--three-pics">
+            <div class="collage__bl">
+              <div class="collage__el"><img src="img/tour-2/10.jpg" alt="tour 2"></div>
+            </div>
+            <div class="collage__bl">
+              <div class="collage__el"><img src="img/tour-2/11.jpg" alt="tour 2"></div>
+              <div class="collage__el"><img src="img/tour-2/12.jpg" alt="tour 2"><div class="collage__num">+ 1 фото</div></div>
+            </div>
+          </div>
+          <div class="collage__slider-mob">
+            <div class="js-mob-slider">
+              <img src="img/tour-2/10.jpg" alt="tour 2">
+              <img src="img/tour-2/11.jpg" alt="tour 2">
+              <img src="img/tour-2/12.jpg" alt="tour 2">
+            </div>
+            <div class="collage__slider-count js-mob-slider-count">
+              <span class="js-mob-slider-current-slide">1</span> / <span class="js-mob-slider-total-slides"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div>
+        <h3><span>Вартість туру</span></h3>
+        {% set tableFirst = {
+          head: [
+            'Днів',
+            'Ціна на 1 дорослого',
+            'Дитина до 5 років <small>(без окремого місця в автобусі)</small>',
+            'Дитина 5 - 10 років <small>(з ліжком і місцем в автобусі)</small>'
+          ],
+          body: [
+            ['5', '1950 грн', '650 грн', '1750 грн'],
+            ['10', '3000 грн', '900 грн', '2800 грн']
+          ]
+        } %}
+        <table class="table table--layout-fixed">
+          <thead>
+            {% for header in tableFirst.head %}
+              <th{% if loop.first %} class="cell cell--set-w-120" {% endif %}>{{ header | safe }}</th>
+            {% endfor %}
+          </thead>
+          <tbody>
+            {% for row in tableFirst.body %}
+              <tr>
+                {% for cell in row %}
+                  <td {% if loop.first %} class="cell cell--set-w-120" {% endif %}>{{ cell }}</td>
+                {% endfor %}
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+
+        {% set tableSecond = {
+          head: [
+            'Тип номера',
+            'Ціна на 1 дорослого',
+            'Дитина 6 - 10 років <small>(з ліжком і місцем в автобусі)</small>'
+          ],
+          body: {
+            firstPart: [
+              ['4 - місний', '1750 грн', '1550 грн'],
+              ['3 - місний', '1850 грн', '1650 грн'],
+              ['2 - місний', '1950 грн', '1750 грн']
+            ],
+            secondPart: [
+              ['4 - місний', '2900 грн', '2700 грн'],
+              ['3 - місний', '2950 грн', '2750 грн'],
+              ['2 - місний', '3000 грн', '2800 грн']
+            ]
+          }
+        } %}
+        <table class="table table--layout-fixed">
+          <thead>
+            {% for header in tableSecond.head %}
+              <th>{{ header | safe }}</th>
+            {% endfor %}
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="3">на 5 днів</td>
+            </tr>
+            {% for row in tableSecond.body.firstPart %}
+              <tr>
+                {% for cell in row %}
+                  <td {% if loop.first %} class="cell cell--text-left cell--with-icon" {% endif %}>
+                    {{ cell }}
+                    {% if loop.first %}
+                      <div>{{ mixins.icon('user') }}<span>x {{ cell | first }}<span></span>
+                    {% endif %}
+                  </td>
+                {% endfor %}
+              </tr>
+            {% endfor %}
+            <tr>
+              <td colspan="3">на 10 днів</td>
+            </tr>
+            {% for row in tableSecond.body.secondPart %}
+              <tr>
+                {% for cell in row %}
+                  <td {% if loop.first %} class="cell cell--text-left cell--with-icon" {% endif %}>
+                    {{ cell }}
+                    {% if loop.first %}
+                      <div>{{ mixins.icon('user') }}<span>x {{ cell | first }}<span></span>
+                    {% endif %}
+                  </td>
+                {% endfor %}
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <div class="list-group">
+          <div>
+            <b>У вартість входить:</b>
+            проїзд в 2 сторони, проживання 5/10 діб в номері класу «економ», супровід від турфірми, страхування.
+          </div>
+        </div>
+      </div>
+      <a href="#" class="button button--full-w button--mob">Залишити заявку</a>
+    </section>
+    <section id="catering">
+      <div>
+        <h3><span>Харчування</span></h3>
+        <p>На базі відпочинку є кухня для самостійного готування. Також можна замовити 2-разове або 3-разове харчування. Поруч є магазини, неподалік є ринок (5 хв ходьби).</p>
+        <figure>
+          <div><img src="img/tour-2/13.jpg" alt="tour 2"></div>
+          <div><img src="img/tour-2/14.jpg" alt="tour 2"></div>
+        </figure>
+      </div>
+    </section>
+    <section id="schedule"></section>
+    <section id="transport">
+      <div>
+        <h3><span>Транспорт</span></h3>
+        <figure>
+          <div><img src="img/tour-2/15.jpg" alt="tour 2"></div>
+          <div><img src="img/tour-2/16.jpg" alt="tour 2"></div>
+          <div><img src="img/tour-2/17.jpg" alt="tour 2"></div>
+          <div><img src="img/tour-2/18.jpg" alt="tour 2"></div>
+        </figure>
+      </div>
+    </section>
+  </section>
+</main>
+
+{% endblock %}

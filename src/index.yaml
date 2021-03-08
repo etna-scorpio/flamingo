@@ -5,3 +5,5 @@ PageList:
     ready: 100
   - file: tour.html
     ready: 100
+  - file: tour2.html
+    ready: 100

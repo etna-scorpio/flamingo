@@ -108,14 +108,14 @@ fixedButton: true
         <table class="table table--layout-fixed">
           <thead>
             {% for header in table.head %}
-              <th{% if loop.first %} class="cell cell--text-left cell--set-w" {% endif %}>{{ header }}</th>
+              <th{% if loop.first %} class="cell cell--text-left cell--set-w-240" {% endif %}>{{ header }}</th>
             {% endfor %}
           </thead>
           <tbody>
             {% for row in table.body %}
               <tr>
                 {% for cell in row %}
-                  <td {% if loop.first %} class="cell cell--text-left cell--with-icon cell--set-w" {% endif %}>
+                  <td {% if loop.first %} class="cell cell--text-left cell--with-icon cell--set-w-240" {% endif %}>
                     {{ cell }}
                     {% if loop.first %}
                       <div>{{ mixins.icon('user') }}<span>x {{ cell | first }}<span></span>
@@ -132,7 +132,7 @@ fixedButton: true
         </div>
         <div class="list-group">
           <div>
-            <b>У вартість входить:</b>
+            <p><b>У вартість входить:</b></p>
             <ul>
               <li>проїзд по всьому маршруту автобусом туристичного класу;</li>
               <li>страхування від нещасних випадків;</li>
@@ -141,20 +141,20 @@ fixedButton: true
             </ul>
           </div>
           <div>
-            <b>Додаткові витрати:</b>
+            <p><b>Додаткові витрати:</b></p>
             <ul>
-              {# <li>вхідні квитки на екскурсійні об’єкти;</li>
+              <li>вхідні квитки на екскурсійні об’єкти;</li>
               <li>харчування;</li>
               <li>особисті витрати;</li>
-              <li>додаткові послуги і розваги.</li> #}
-              <li>особисті витрати;</li>
+              <li>додаткові послуги і розваги.</li>
+              {# <li>особисті витрати;</li>
               <li>витрати на харчування (в готелі пропонують комплекні сніданки+вечері, вартість 200грн;</li>
               <li>вхідний квиток в Старе село-70 грн;</li>
               <li>театралізоване дійство в Корчмі-80 грн;</li>
               <li>канатно-крісельна дорога на г. Гимба - 150 грн;</li>
               <li>водоспад Шипіт -20грн;</li>
               <li>озеро Синевир -30 грн;</li>
-              <li>Купальні “Косино”(3 год) – 450 грн;</li>
+              <li>Купальні “Косино”(3 год) – 450 грн;</li> #}
             </ul>
           </div>
         </div>
