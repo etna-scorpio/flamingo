@@ -50,7 +50,7 @@
     </header>
     <!-- BEGIN content -->
     <div class="out">
-      <section class="hero js-hero" style="background-image: url('img/hero-bg3.jpg')">
+      <section class="hero hero--bg-position js-hero" style="background-image: url('img/hero-bg3.jpg')">
         <div class="hero__title">
           <h1 class="title-h1 title-h1--white">
             <span class="hero__highlight hero__highlight--padding">база відпочинку “АрінА” з басейном</span>
@@ -83,7 +83,7 @@
               <p>Це затишна база відпочинку з просторою озелененою територією. Гості можуть користуватися відкритим басейном, поряд з яким розташувалися лежаки. На подвір'ї готелю є зона відпочинку з бесідками та мангалом. Діти можуть гратися на облаштованому майданчику з гірками та гойдалкою. Також є кухня для самостійного готування їжі з усім необхідним приладдям, холодильником, електрочайниками.</p>
               <p>У готелі облаштована крита їдальня на свіжому повітрі, є міні-бар. За додаткову плату можна замовити триразове харчування (1000 грн/особа за 5 днів). База відпочинку розташована на 3-й береговій лінії, до моря – 800 м (15 хв ходьби).</p>
               <p>Є номери трьох класів: економ, економ покращений, стандарт.</p>
-              <div class="collage">
+              <div class="collage js-collage">
                 <div class="collage__row collage__row--three-pics">
                   <div class="collage__bl">
                     <div class="collage__el"><img src="img/tour-2/1.jpg" alt="tour 2"></div>
@@ -98,7 +98,7 @@
                     <div class="collage__el"><img src="img/tour-2/4.jpg" alt="4"></div>
                     <div class="collage__el"><img src="img/tour-2/5.jpg" alt="5"></div>
                     <div class="collage__el"><img src="img/tour-2/6.jpg" alt="6"></div>
-                    <div class="collage__el">
+                    <div class="collage__el js-show-overlay-slider">
                       <img src="img/tour-2/7.jpg" alt="7">
                       <div class="collage__num"><span>+</span>2 фото</div>
                     </div>
@@ -126,14 +126,14 @@
               <h3><span>Номер "економ"</span></h3>
               <p>Комплектація номера: у номері є всі необхідні меблі, постіль на ліжках. Туалет і душ – спільний на території. Користування басейном та кухнею безкоштовне.</p>
               <p>Номери "економ" є 2-х, 3-х і 4-місні.</p>
-              <div class="collage">
+              <div class="collage js-collage">
                 <div class="collage__row collage__row--three-pics">
                   <div class="collage__bl">
                     <div class="collage__el"><img src="img/tour-2/10.jpg" alt="tour 2"></div>
                   </div>
                   <div class="collage__bl">
                     <div class="collage__el"><img src="img/tour-2/11.jpg" alt="tour 2"></div>
-                    <div class="collage__el"><img src="img/tour-2/12.jpg" alt="tour 2">
+                    <div class="collage__el js-show-overlay-slider"><img src="img/tour-2/12.jpg" alt="tour 2">
                       <div class="collage__num">+ 1 фото</div>
                     </div>
                   </div>
@@ -156,10 +156,12 @@
               <h3><span>Вартість туру</span></h3>
               <table class="table table--layout-fixed">
                 <thead>
-                  <th class="cell cell--set-w-120">Днів</th>
-                  <th>Ціна на 1 дорослого</th>
-                  <th>Дитина до 5 років <small>(без окремого місця в автобусі)</small></th>
-                  <th>Дитина 5 - 10 років <small>(з ліжком і місцем в автобусі)</small></th>
+                  <tr>
+                    <th class="cell cell--set-w-120">Днів</th>
+                    <th>Ціна на 1 дорослого</th>
+                    <th>Дитина до 5 років <small>(без окремого місця в автобусі)</small></th>
+                    <th>Дитина 5 - 10 років <small>(з ліжком і місцем в автобусі)</small></th>
+                  </tr>
                 </thead>
                 <tbody>
                   <tr>
@@ -268,7 +270,211 @@
               </figure>
             </div>
           </section>
-          <section id="schedule"></section>
+          <section id="schedule">
+            <div>
+              <h3><span>Дати виїздів</span></h3>
+              <h4>Дати та час виїзду / приїзду з Вінниці на 5 днів відпочинку</h4>
+              <hr>
+              <div class="schedule">
+                <table>
+                  <thead>
+                    <th>Дата виїзду <small>(до Вінниці)</small></th>
+                    <th>Час виїзду <small>(до Вінниці)</small></th>
+                    <th>Дата приїзду <small>(з Вінниці)</small></th>
+                    <th>Час виїзду <small>(з Вінниці)</small></th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>25.06</td>
+                      <td>22:00</td>
+                      <td>01.06</td>
+                      <td>21:00</td>
+                    </tr>
+                    <tr>
+                      <td>30.06</td>
+                      <td>22:00</td>
+                      <td>06.07</td>
+                      <td>21:00</td>
+                    </tr>
+                    <tr>
+                      <td>01.07</td>
+                      <td>22:00</td>
+                      <td>07.07</td>
+                      <td>21:00</td>
+                    </tr>
+                    <tr>
+                      <td>01.07</td>
+                      <td>22:00</td>
+                      <td>07.07</td>
+                      <td>21:00</td>
+                    </tr>
+                    <tr>
+                      <td>01.07</td>
+                      <td>22:00</td>
+                      <td>07.07</td>
+                      <td>21:00</td>
+                    </tr>
+                    <tr>
+                      <td>01.07</td>
+                      <td>22:00</td>
+                      <td>07.07</td>
+                      <td>21:00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h4>Дати та час виїзду / приїзду з Вінниці на 10 днів відпочинку</h4>
+              <hr>
+              <div class="schedule">
+                <table>
+                  <thead>
+                    <th>Дата виїзду <small>(до Вінниці)</small></th>
+                    <th>Час виїзду <small>(до Вінниці)</small></th>
+                    <th>Дата приїзду <small>(з Вінниці)</small></th>
+                    <th>Час виїзду <small>(з Вінниці)</small></th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>25.06</td>
+                      <td>22:00</td>
+                      <td>01.06</td>
+                      <td>21:00</td>
+                    </tr>
+                    <tr>
+                      <td>30.06</td>
+                      <td>22:00</td>
+                      <td>06.07</td>
+                      <td>21:00</td>
+                    </tr>
+                    <tr>
+                      <td>01.07</td>
+                      <td>22:00</td>
+                      <td>07.07</td>
+                      <td>21:00</td>
+                    </tr>
+                    <tr>
+                      <td>01.07</td>
+                      <td>22:00</td>
+                      <td>07.07</td>
+                      <td>21:00</td>
+                    </tr>
+                    <tr>
+                      <td>01.07</td>
+                      <td>22:00</td>
+                      <td>07.07</td>
+                      <td>21:00</td>
+                    </tr>
+                    <tr>
+                      <td>01.07</td>
+                      <td>22:00</td>
+                      <td>07.07</td>
+                      <td>21:00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <a href="#" class="button button--full-w button--mob">Залишити заявку</a>
+              <h3><span>Маршрут</span><small>(час виїзду із інших міст)</small></h3>
+              <h5 class="title-h5 title-h5--center title-h5--tablet">Напрямок Вінниця - Коблево</h5>
+              <div class="route">
+                <i class="ico ico-direction"></i>
+                <svg class="icon icon-bus">
+                  <use xlink:href="img/sprite.svg#icon-bus"></use>
+                </svg>
+                <div class="route__way">
+                  <div class="route__block">
+                    <div class="route__stop">
+                      <div class="route__stop-name">
+                        <h5 class="title-h5">Вінниця</h5>
+                        <div>вул. Нансена, 7</div>
+                      </div>
+                      <div class="route__stop-time">22:00</div>
+                    </div>
+                    <div class="route__stop">
+                      <div class="route__stop-name">
+                        <h5 class="title-h5">Немирів</h5>
+                        <div>навпроти “АТБ”</div>
+                      </div>
+                      <div class="route__stop-time">22:45</div>
+                    </div>
+                    <div class="route__stop">
+                      <div class="route__stop-name">
+                        <h5 class="title-h5">Гайсин</h5>
+                        <div>ТЦ “Європейський”</div>
+                      </div>
+                      <div class="route__stop-time">23:30</div>
+                    </div>
+                    <div class="route__stop">
+                      <div class="route__stop-name">
+                        <h5 class="title-h5">Умань</h5>
+                        <div>АЗС “ОККО”</div>
+                      </div>
+                      <div class="route__stop-time">00:30</div>
+                    </div>
+                    <div class="route__stop">
+                      <div class="route__stop-name">
+                        <h5 class="title-h5">Коблево</h5>
+                        <div>база “Аріна”</div>
+                      </div>
+                      <div class="route__stop-time">08:00</div>
+                    </div>
+                  </div>
+                </div>
+                <svg class="icon icon-waves">
+                  <use xlink:href="img/sprite.svg#icon-waves"></use>
+                </svg>
+              </div>
+              <h5 class="title-h5 title-h5--center title-h5--tablet">Напрямок Коблево - Вінниця</h5>
+              <div class="route route--back">
+                <i class="ico ico-direction"></i>
+                <svg class="icon icon-home">
+                  <use xlink:href="img/sprite.svg#icon-home"></use>
+                </svg>
+                <div class="route__way">
+                  <div class="route__block">
+                    <div class="route__stop">
+                      <div class="route__stop-name">
+                        <h5 class="title-h5">Вінниця</h5>
+                        <div>вул. Нансена, 7</div>
+                      </div>
+                      <div class="route__stop-time">21:00</div>
+                    </div>
+                    <div class="route__stop">
+                      <div class="route__stop-name">
+                        <h5 class="title-h5">Немирів</h5>
+                        <div>навпроти “АТБ”</div>
+                      </div>
+                      <div class="route__stop-time">20:15</div>
+                    </div>
+                    <div class="route__stop">
+                      <div class="route__stop-name">
+                        <h5 class="title-h5">Гайсин</h5>
+                        <div>ТЦ “Європейський”</div>
+                      </div>
+                      <div class="route__stop-time">19:30</div>
+                    </div>
+                    <div class="route__stop">
+                      <div class="route__stop-name">
+                        <h5 class="title-h5">Умань</h5>
+                        <div>АЗС “ОККО”</div>
+                      </div>
+                      <div class="route__stop-time">18:30</div>
+                    </div>
+                    <div class="route__stop">
+                      <div class="route__stop-name">
+                        <h5 class="title-h5">Коблево</h5>
+                        <div>база “Аріна”</div>
+                      </div>
+                      <div class="route__stop-time">17:00</div>
+                    </div>
+                  </div>
+                </div>
+                <svg class="icon icon-bus-back">
+                  <use xlink:href="img/sprite.svg#icon-bus-back"></use>
+                </svg>
+              </div>
+            </div>
+          </section>
           <section id="transport">
             <div>
               <h3><span>Транспорт</span></h3>
@@ -282,6 +488,17 @@
           </section>
         </section>
       </main>
+      <div class="overlay-slider-wrapper js-overlay-slider-wrapper">
+        <div class="js-overlay-slider-close">
+          <svg class="icon icon-close">
+            <use xlink:href="img/sprite.svg#icon-close"></use>
+          </svg>
+        </div>
+        <div class="overlay-slider-inner">
+          <div class="overlay-slider js-overlay-slider"></div>
+          <div class="overlay-slider-nav js-overlay-slider-nav"></div>
+        </div>
+      </div>
     </div>
     <footer class="footer">
       <div class="footer__inner">

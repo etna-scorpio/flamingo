@@ -1,0 +1,163 @@
+.route
+  position: relative
+  display: flex
+  margin-bottom: 60px
+  padding-top: 77px
+  align-items: center
+  &--back
+    .ico-direction
+      +rotate(-180)
+  +r(1024)
+    padding-top: 0
+    margin: 35px 0
+    &.route--back
+      .route__block
+        flex-direction: column-reverse
+      .route__stop
+        &:first-child
+          margin-bottom: 0
+          .route__stop-name:after
+            margin-bottom: -19px
+        &:last-child
+          margin-bottom: 35px
+          .route__stop-name:after
+            bottom: 100%
+            margin-bottom: 4px
+        &:nth-child(2)
+          margin-bottom: 35px
+        &:nth-last-child(2)
+          margin-bottom: 40px
+  &__way
+    position: relative
+    width: 100%
+    max-width: 853px
+    height: 6px
+    margin: 0 12px
+    background: #fff
+    border-radius: 5px
+    +r(1024)
+      max-width: 350px
+      height: auto
+      margin: 0 auto
+      background: transparent
+    &:before
+      content: ''
+      position: absolute
+      z-index: -1
+      top: -2px
+      left: -2px
+      right: -2px
+      bottom: -2px
+      border-radius: 5px
+      background-image: linear-gradient(to bottom, #D02FBF, #FDD80C)
+      +r(1024)
+        top: 0
+        left: 0
+        right: auto
+        bottom: 5px
+        width: 12px
+        background-image: linear-gradient(to left, #D02FBF, #FDD80C)
+    &:after
+      content: ""
+      position: absolute
+      top: 0
+      left: 2px
+      bottom: 5px
+      width: 8px
+      background: #fff
+      border-radius: 5px
+      +r(1024)
+        display: block
+  &__block
+    position: absolute
+    display: flex
+    justify-content: center
+    bottom: 100%
+    width: 100%
+    margin-bottom: -38px
+    padding: 0 26.5px
+    +r(1024)
+      position: relative
+      flex-direction: column
+      z-index: 1
+      margin-bottom: 0
+      padding: 0 0 0 27px
+  &__stop
+    display: flex
+    padding: 0 22.5px
+    text-align: center
+    color: $black
+    align-items: center
+    flex-direction: column
+    +r(1150)
+      padding: 0 10px
+    +r(1024)
+      align-items: flex-start
+      text-align: left
+      margin-bottom: 40px
+      padding: 0
+      &:first-child
+        margin-bottom: 35px
+        .route__stop-name:after
+          bottom: 100%
+          margin-bottom: 4px
+      &:last-child
+        margin-bottom: 0
+        .route__stop-name:after
+          margin-bottom: -8px
+      &:nth-last-child(2)
+        margin-bottom: 35px
+  &__stop-name
+    position: relative
+    white-space: nowrap
+    &:after
+      content: ''
+      display: block
+      margin: 7px auto 5px
+      width: 20px
+      height: 20px
+      background: #fff
+      border: 2px solid $blue
+      border-radius: 50%
+    +r(1024)
+      display: flex
+      align-items: baseline
+      flex-wrap: wrap
+      white-space: initial
+      &:after
+        position: absolute
+        left: -31px
+        bottom: 50%
+        margin: 0 0 5px
+      h5
+        font-size: rem(16)
+        &:after
+          content: ','
+          margin-right: 5px
+  &__stop-time
+    +proxima-sb
+    +r(1024)
+      order: -1
+      margin-bottom: 2px
+  .icon
+    +r(1024)
+      display: none
+  .icon-bus,
+  .icon-bus-back
+    font-size: rem(35)
+  .icon-home
+    margin-bottom: 5px
+    font-size: rem(40)
+  .icon-waves
+    font-size: rem(25)
+  .ico-direction
+    position: absolute
+    top: -10px
+    left: 50%
+    width: 45px
+    height: 28px
+    margin-left: -22.5px
+    background-image: url(../icons/direction.svg)
+    background-size: contain
+    +r(1024)
+      display: none

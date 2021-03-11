@@ -63,8 +63,12 @@
     background: rgba($dark-navy, 0.4)
     font-size: rem(35)
     color: #fff
+    user-select: none
+    cursor: pointer
+    +r(1200)
+      font-size: rem(30)
     +r(1024)
-      font-size: rem(22)
+      font-size: rem(20)
     span
       margin: 3px 5px 0 0
   &__slider-mob
@@ -93,6 +97,7 @@
     margin-top: -15px
     font-size: 0
     background: rgba(255, 255, 255, 0.9)
+    transition: background 0.2s ease
     &:before
       content: ''
       position: absolute
@@ -103,7 +108,11 @@
       background-image: url(../icons/chevron.svg)
       background-size: contain
       background-repeat: no-repeat
+    &:hover,
+    &:focus
+      background: #fff
   .slick-prev
+    left: 0
     &:before
       margin-left: -6px
   .slick-next

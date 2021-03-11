@@ -3,9 +3,13 @@
 +font(proxima-nova-bold, proxima-nova-bold)
 +font(proxima-nova-regular-italic, proxima-nova-regular-italic)
 +font(intro-bold, intro-bold)
++font(digit, digit)
 
 =ib
   font-family: 'intro-bold', sans-serif
+
+=digit
+  font-family: 'digit', sans-serif
 
 =proxima
   font-family: 'proxima-nova', sans-serif
@@ -75,3 +79,9 @@ body
   font-size: rem(19)
   &--uppercase
     text-transform: uppercase
+  &--center
+    text-align: center
+  &--tablet
+    display: none
+    +r(1024)
+      display: block

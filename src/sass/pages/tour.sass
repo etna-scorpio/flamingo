@@ -15,7 +15,6 @@
     +r(767)
       display: block
 
-
 .content
   flex-basis: 100%
   &.content--subtitle-orange
@@ -55,6 +54,11 @@
     // font-size: rem(30)
     font-size: rem(27)
     margin-bottom: 35px
+    small
+      display: block
+      margin-top: 12px
+      +proxima
+      font-size: rem(16)
     span
       position: relative
       display: inline-block
@@ -288,4 +292,6 @@
       display: none
       +r(767)
         display: block
-
+    + h3
+      +r(767)
+        margin-top: 30px

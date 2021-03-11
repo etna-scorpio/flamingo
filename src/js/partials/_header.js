@@ -8,8 +8,8 @@ var header = document.getElementsByClassName('js-header')[0],
 var switchHeader = function() {
   headerHeight = header.getBoundingClientRect().height;
   headerTop = header.getBoundingClientRect().y;
-  desktop = document.documentElement.clientWidth > 1024;
-  mobile = document.documentElement.clientWidth < 1024;
+  desktop = document.documentElement.clientWidth >= 1025;
+  mobile = document.documentElement.clientWidth < 1025;
 
   if (desktop) {
     // console.log('desktop');
