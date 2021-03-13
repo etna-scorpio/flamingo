@@ -7,11 +7,14 @@ var slider = $('.js-overlay-slider'),
   showSliderBtn = $('.js-show-overlay-slider'),
   hideSliderBtn = $('.js-overlay-slider-close'),
   activeClass = 'is-visible',
+  path,
   images;
 
 window.addEventListener('DOMContentLoaded', function() {
 
   function addImagesToSlider(arr) {
+    var slideNum;
+
     arr.each(function(index, el) {
       let image = `<div class="overlay-slider__bl">${el.outerHTML}</div>`;
       let thumb = `<div class="overlay-slider-nav__bl">
@@ -21,6 +24,10 @@ window.addEventListener('DOMContentLoaded', function() {
         </div>`;
       slider.append(image);
       navForSlider.append(thumb);
+
+      if ($(el).attr('src') === path) {
+        slideNum = index;
+      }
     });
 
     slider.slick({
@@ -38,6 +45,9 @@ window.addEventListener('DOMContentLoaded', function() {
       focusOnSelect: true,
       infinite: true
     });
+
+    slider.slick('slickGoTo', slideNum);
+    navForSlider.slick('slickGoTo', slideNum);
   }
 
   function removeImagesFromSlider() {
@@ -46,9 +56,11 @@ window.addEventListener('DOMContentLoaded', function() {
   }
 
   function showSlider() {
+    path = $(this).find('img').attr('src');
+    images = $(this).closest('.js-collage').find('.collage__row img');
+
     $('body').css('overflow', 'hidden');
     wrapper.addClass(activeClass);
-    images = $(this).closest('.js-collage').find('.collage__row img');
 
     addImagesToSlider(images);
   }
@@ -63,6 +75,8 @@ window.addEventListener('DOMContentLoaded', function() {
 
   showSliderBtn.click(showSlider);
   hideSliderBtn.click(hideSlider);
-
+  $(document).keyup(function(e) {
+    if (e.keyCode === 27) hideSlider();
+  });
 
 });

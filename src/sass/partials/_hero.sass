@@ -8,11 +8,17 @@
   min-height: 685px
   background-color: #ddd
   background-size: cover
-  background-position: 50% 35%
+  background-position: center center
   background-repeat: no-repeat
   +css-lock(390, 685, 767, 1200, min-height)
-  &--bg-position
-    background-position: 50% 0
+  &--bg-position-md
+    background-position: 50% 35%
+    +rmin(1950)
+      background-position: center center
+  &--bg-position-sm
+    background-position: 50% 26%
+    +rmin(1950)
+      background-position: center center
   +r(1024)
     padding: 45px 15px 10px
   +r(767)
@@ -28,10 +34,12 @@
         display: none
   &__main
     display: block
+    text-transform: uppercase
     max-width: rem(800)
-    margin-bottom: 5px
-    +r(1024)
-      margin-bottom: 15px
+    margin-bottom: 10px
+    +r(767)
+      text-transform: initial
+      margin-bottom: 5px
   &__highlight
     display: inline-block
     max-width: rem(630)
@@ -42,13 +50,16 @@
     color: $black
     line-height: 1.2
     +r(1024)
-      font-size: rem(32)
+      font-size: rem(30)
     +r(767)
+      display: inline-block
       padding: 10px 7px
-      font-size: rem(22)
+      text-transform: initial
+      font-size: rem(20)
     &--padding
-      padding: 23px 21px
+      padding: 12px 21px
       +r(1024)
-        padding: 15px
+        max-width: rem(450)
+        padding: 10px
       +r(767)
-        padding: 15px 10px
+        padding: 5px
