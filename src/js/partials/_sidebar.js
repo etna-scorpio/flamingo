@@ -1,72 +1,76 @@
 import $ from 'jquery';
 
-var sidebar = $('.js-sidebar'),
-  sidebarInner = $('.js-sidebar-inner'),
-  sidebarInnerHeight = sidebarInner.outerHeight(),
-  sidebarLink = $('.js-sidebar-link'),
-  section,
-  header = $('.js-header'),
-  headerHeight = Math.round(header.outerHeight()),
-  spacing = 50,
-  windowPoint,
-  sidebarTop,
-  stopPoint;
+if ($('.js-sidebar').length > 0) {
 
-function scrollToSection(e) {
-  e.preventDefault();
+  var sidebar = $('.js-sidebar'),
+    sidebarInner = $('.js-sidebar-inner'),
+    sidebarInnerHeight = sidebarInner.outerHeight(),
+    sidebarLink = $('.js-sidebar-link'),
+    section,
+    header = $('.js-header'),
+    headerHeight = Math.round(header.outerHeight()),
+    spacing = 50,
+    windowPoint,
+    sidebarTop,
+    stopPoint;
 
-  sidebarLink.removeClass('is-active');
-  $(this).addClass('is-active');
+  function scrollToSection(e) {
+    e.preventDefault();
 
-  section = $(this).attr('href');
+    sidebarLink.removeClass('is-active');
+    $(this).addClass('is-active');
 
-  $('html, body').animate({
-    scrollTop: $(section).offset().top - headerHeight - spacing
-  });
-};
+    section = $(this).attr('href');
 
-sidebarLink.click(scrollToSection);
+    $('html, body').animate({
+      scrollTop: $(section).offset().top - headerHeight - spacing
+    });
+  };
 
-function checkHeaderVisibility() {
-  if (header.hasClass('is-desktop-scroll')) {
-    headerHeight = header.outerHeight();
-  } else {
-    headerHeight = 0;
-  }
-  return headerHeight;
-}
+  sidebarLink.click(scrollToSection);
 
-function moveSidebarOnScroll() {
-  windowPoint = window.scrollY + checkHeaderVisibility() + spacing;
-  sidebarTop = sidebar.offset().top,
-  stopPoint = sidebarTop + sidebar.outerHeight();
-
-  if (windowPoint > sidebarTop) {
-
-    if (windowPoint + sidebarInnerHeight > stopPoint) {
-      sidebarInner
-        .removeClass('is-fixed')
-        .addClass('is-absolute')
-        .css('top', stopPoint - sidebarInnerHeight + 'px');
+  function checkHeaderVisibility() {
+    if (header.hasClass('is-desktop-scroll')) {
+      headerHeight = header.outerHeight();
     } else {
-      sidebarInner
-        .removeClass('is-absolute')
-        .addClass('is-fixed')
-        .css('top', checkHeaderVisibility() + spacing + 'px');
+      headerHeight = 0;
     }
-
-  } else if (windowPoint < sidebarTop) {
-    sidebarInner.removeClass('is-fixed').removeAttr('style');
+    return headerHeight;
   }
-}
 
-$(document).ready(function() {
-  checkHeaderVisibility();
-  moveSidebarOnScroll();
-});
-$(window).scroll(moveSidebarOnScroll);
-$(window).resize(function() {
-  checkHeaderVisibility();
-  moveSidebarOnScroll();
-});
+  function moveSidebarOnScroll() {
+    windowPoint = window.scrollY + checkHeaderVisibility() + spacing;
+    sidebarTop = sidebar.offset().top,
+    stopPoint = sidebarTop + sidebar.outerHeight();
+
+    if (windowPoint > sidebarTop) {
+
+      if (windowPoint + sidebarInnerHeight > stopPoint) {
+        sidebarInner
+          .removeClass('is-fixed')
+          .addClass('is-absolute')
+          .css('top', stopPoint - sidebarInnerHeight + 'px');
+      } else {
+        sidebarInner
+          .removeClass('is-absolute')
+          .addClass('is-fixed')
+          .css('top', checkHeaderVisibility() + spacing + 'px');
+      }
+
+    } else if (windowPoint < sidebarTop) {
+      sidebarInner.removeClass('is-fixed').removeAttr('style');
+    }
+  }
+
+  $(document).ready(function() {
+    checkHeaderVisibility();
+    moveSidebarOnScroll();
+  });
+  $(window).scroll(moveSidebarOnScroll);
+  $(window).resize(function() {
+    checkHeaderVisibility();
+    moveSidebarOnScroll();
+  });
+
+}
 

@@ -1,0 +1,36 @@
+.category
+  padding: 0 15px
+  margin-bottom: rem(120)
+  +r(1024)
+    margin-bottom: rem(65)
+  +r(767)
+    margin-bottom: remMob(40)
+  &__title
+    margin-bottom: rem(65)
+    +r(767)
+      margin-bottom: remMob(40)
+  &__inner
+    max-width: 1160px
+    margin: 0 auto 25px
+    padding: 0 25px
+    +r(1024)
+      padding: 0 15px
+      margin-bottom: 0
+  &__block
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -25px
+    +r(1024)
+      margin: 0 -15px
+  &__element
+    flex-basis: 50%
+    padding: 0 25px 50px
+    +r(1024)
+      padding: 0 15px 40px
+    +r(767)
+      flex-basis: 100%
+      padding: 0 0 40px
+      &.category__element--last
+        padding-bottom: 0
+  &__more
+    text-align: center

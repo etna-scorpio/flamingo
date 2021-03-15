@@ -7,3 +7,5 @@ PageList:
     ready: 100
   - file: tour2.html
     ready: 100
+  - file: sale.html
+    ready: 100

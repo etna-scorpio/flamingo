@@ -1,0 +1,62 @@
+---
+title: Акции
+outMod: out--no-hero
+modal: true
+modalClass: modal--center
+fixedButton: true
+headerClass: header--inner
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  <section class="category">
+    <div class="category__title">
+      <div class="section-title"><h2 class="title-h2">Наші акції</h2></div>
+    </div>
+    <div class="category__inner">
+      <div class="category__block">
+        {% set categoryCard = [
+          {
+            cardTitle: 'Хочеш відсвяткувати День народження у подорожі? ',
+            cardDescription: '<p>Швидше бронюй один з наших турів, тим паче, що це вигідно! Якщо твій День народження припадає на дати туру, ми обов`язково зробимо знижку – <span class="card__highlight">до 500 грн</span> на багатоденні тури і <span class="card__highlight">до 50% на одноденні тури</span>.</p><p>Обирай тур, телефонуй нам і дізнавайся, яка знижка на тебе чекає!</p>'
+          }, {
+            cardTitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            cardDescription: '<p>Eu, nunc, id quis eget ac sit. Fames fringilla elementum tempus, nisl ac. Ultrices orci auctor ante enim ut.</p>'
+          },
+          {
+            cardTitle: 'Хочеш відсвяткувати День народження у подорожі? ',
+            cardDescription: '<p>Швидше бронюй один з наших турів, тим паче, що це вигідно! Якщо твій День народження припадає на дати туру, ми обов`язково зробимо знижку – <span class="card__highlight">до 500 грн</span> на багатоденні тури і <span class="card__highlight">до 50% на одноденні тури</span>.</p><p>Обирай тур, телефонуй нам і дізнавайся, яка знижка на тебе чекає!</p>'
+          },
+          {
+            cardTitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            cardDescription: '<p>Eu, nunc, id quis eget ac sit. Fames fringilla elementum tempus, nisl ac. Ultrices orci auctor ante enim ut.</p>'
+          }
+        ] %}
+
+        {% for item in categoryCard %}
+        <div class="category__element{% if loop.last %} category__element--last{% endif %}">
+          <div class="card card--sale">
+            <div class="card__inner">
+              <img class="card__gift" src="icons/gift.svg" alt="gift icon">
+              <img class="card__pic" height="330" src="img/tour-category/{{ loop.index }}.jpg" alt="tour-category-card-{{ loop.index }}" />
+            </div>
+            <div class="card__description">
+              <div class="card__description-title">
+                <h5 class="title-h5">{{ item.cardTitle }}</h5>
+              </div>
+              {{ item.cardDescription | safe }}
+              <div class="card__button">
+                {% if loop.index % 2 %}
+                <a href="#" class="button js-show-modal">Скористатись зараз</a>
+                {% else %}
+                <a href="https://etna-scorpio.github.io/flamingo/tour.html" class="button">Дізнатись більше</a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+{% endblock %}

@@ -37,6 +37,20 @@
       .language__switch
         &.is-active
           color: $blue
+  &--inner
+    transform: translate(0)
+    .logo svg path
+      &:first-child
+        fill: $dark-brown
+      &:last-child
+        fill: $pink
+    .header__group
+      padding-top: 3px
+      +r(1024)
+        padding-top: 20px
+    &.is-desktop-scroll
+      .header__group
+        padding-top: 0
   &__inner
     display: flex
     justify-content: space-between
