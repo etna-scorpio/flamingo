@@ -1,0 +1,56 @@
+.contacts
+  max-width: 883px
+  margin: 0 auto
+  padding: 0 15px
+  &__inner
+    display: flex
+    margin-top: 55px
+  &__bl
+    flex-basis: 100%
+    &:first-child
+      margin-right: 55px
+      max-width: 350px
+      +r(767)
+        margin-right: 0
+
+
+.form
+  &__title
+    margin-bottom: 25px
+  &__row
+    margin-bottom: 20px
+  &__input,
+  &__textarea
+    width: 100%
+    max-width: 350px
+    padding: 12px 12px 11px
+    +proxima
+    font-size: rem(17)
+    border: 1px solid #bdbdbb
+    &.is-error
+      border-color: $red
+      margin-bottom: 5px
+      + .form__helper
+        display: block
+  &__textarea
+    height: 120px
+    resize: none
+  &__helper
+    display: none
+    +proxima-b
+    font-size: rem(13)
+    color: $red
+
+
+.address
+  display: flex
+  &__bl
+    flex-basis: 100%
+    padding-left: 15px
+    &:first-child
+      max-width: 230px
+      padding-right: 15px
+      padding-left: 0
+    b
+      margin-bottom: 5px
+      +proxima-sb

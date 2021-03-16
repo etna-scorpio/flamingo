@@ -1,0 +1,51 @@
+---
+title: Контакти
+outMod: out--no-hero
+activeHeaderLink: 'Контакти'
+fixedButton: true
+headerClass: header--inner
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  <section class="contacts">
+    <div class="section-title"><h2 class="title-h2">Контакти</h2></div>
+    <div class="contacts__inner">
+      <div class="contacts__bl">
+        <form class="form">
+          <div class="form__title">
+            <h5 class="title-h5">Замовити дзвінок</h5>
+          </div>
+          <div class="form__row">
+            <input placeholder="Ваше ім’я" type="text" class="form__input">
+          </div>
+          <div class="form__row">
+            <input placeholder="Номер телефону" type="tel" class="form__input">
+            <small class="form__helper">Введіть ваш номер телефону</small>
+          </div>
+          <div class="form__row">
+            <textarea class="form__textarea" placeholder="Що вас цікавить"></textarea>
+          </div>
+          <button type="submit" class="button">Надіслати</button>
+        </form>
+      </div>
+      <div class="contacts__bl">
+        <div class="address">
+          <div class="address__bl">
+            <b>Наша адреса:</b>
+            <address>м. Вінниця, проспект Коцюбинського, 4, офіс 15 (БЦ "Коцюбинський")</address>
+          </div>
+          <div class="address__bl">
+            <b>Ми на зв’язку:</b>
+            <div class="phone-number">
+              <a href="tel: +380983615756" class="phone-number__link">+38 (098) 361-57-56</a>
+            </div>
+            <div class="phone-number">
+              <a href="tel: +380932557395" class="phone-number__link">+38 (093) 255-73-95</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

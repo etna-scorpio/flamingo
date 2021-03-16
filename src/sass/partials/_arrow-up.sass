@@ -1,15 +1,14 @@
 .arrow-up
   position: fixed
-  top: 50%
-  right: 20px
+  z-index: 15
+  top: 55%
+  right: 0
   display: flex
   align-items: center
   justify-content: center
-  width: 40px
-  height: 40px
-  margin-top: -20px
-  background: $pink
-  border-radius: 50%
+  width: 30px
+  height: 30px
+  background: rgba(#bdbdbd, 0.4)
   cursor: pointer
   opacity: 0
   visibility: hidden
@@ -21,8 +20,7 @@
     left: 0
     right: 0
     bottom: 0
-    border-radius: 50%
-    box-shadow: 0 2px 5px 0 rgba($pink, 0.4)
+    box-shadow: 0 2px 5px 0 rgba(#bdbdbd, 0.4)
     transition: opacity 0.2s ease, visibility 0.2s ease
   &:hover,
   &:focus
@@ -30,8 +28,10 @@
       opacity: 0
       visibility: hidden
   &.is-visible
-    opacity: 1
-    visibility: visible
+    +r(767)
+      opacity: 1
+      visibility: visible
   .icon-caret
+    margin-bottom: 1px
     fill: #fff
-    font-size: 11px
+    font-size: 9px
