@@ -5,13 +5,22 @@
   &__inner
     display: flex
     margin-top: 55px
+    +r(767)
+      flex-wrap: wrap
   &__bl
     flex-basis: 100%
     &:first-child
       margin-right: 55px
       max-width: 350px
       +r(767)
-        margin-right: 0
+        max-width: 400px
+        margin: 0 auto 40px
+  &__video
+    margin-top: 40px
+    b
+      display: block
+      margin-bottom: 15px
+      +proxima-sb
 
 
 .form
@@ -22,7 +31,6 @@
   &__input,
   &__textarea
     width: 100%
-    max-width: 350px
     padding: 12px 12px 11px
     +proxima
     font-size: rem(17)
@@ -44,13 +52,37 @@
 
 .address
   display: flex
+  margin-bottom: 30px
+  +r(767)
+    max-width: 400px
+    margin: 0 auto
+    justify-content: space-between
+    flex-wrap: wrap
   &__bl
     flex-basis: 100%
     padding-left: 15px
+    +r(767)
+      max-width: 170px
+      padding: 0
+      margin-bottom: 20px
+      flex-basis: auto
     &:first-child
       max-width: 230px
       padding-right: 15px
       padding-left: 0
+    address
+      font-style: normal
     b
+      display: block
       margin-bottom: 5px
       +proxima-sb
+      color: $black
+
+.phone-number
+  &__link
+    text-decoration: none
+    color: inherit
+
+.video
+  iframe
+    width: 100%
