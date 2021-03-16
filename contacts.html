@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <title>Сторінка туру</title>
+    <title>Контакти</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes, viewport-fit=cover">
@@ -13,7 +13,7 @@
   </head>
 
   <body>
-    <header class="header  js-header">
+    <header class="header header--inner js-header">
       <div class="header__inner">
         <a href="/" class="logo">
           <svg width="499" viewBox="0 0 499 82" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,13 +30,13 @@
         <div class="header__group js-header-menu">
           <nav class="menu">
             <li class="menu__item"><a href="#" class="menu__link">Всі тури</a></li>
-            <li class="menu__item"><a href="#" class="menu__link menu__link--active">Карпати</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">Карпати</a></li>
             <li class="menu__item"><a href="#" class="menu__link">Закарпаття</a></li>
             <li class="menu__item"><a href="#" class="menu__link">Чорне море</a></li>
             <li class="menu__item"><a href="#" class="menu__link">Азовське море</a></li>
             <li class="menu__item"><a href="#" class="menu__link">Львів</a></li>
             <li class="menu__item"><a href="#" class="menu__link">Про нас</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">Контакти</a></li>
+            <li class="menu__item"><a href="#" class="menu__link menu__link--active">Контакти</a></li>
           </nav>
           <div class="language">
             <span class="language__switch">Рус</span>
@@ -49,197 +49,60 @@
       </div>
     </header>
     <!-- BEGIN content -->
-    <div class="out">
-      <section class="hero hero--bg-position-md js-hero" style="background-image: url('img/hero-bg2.jpg')">
-        <div class="hero__title">
-          <h1 class="title-h1 title-h1--white">
-            <span class="hero__main">Зимовий відпочинок в Карпатах</span>
-            <span class="hero__highlight">Фантастична мандрівка засніженими горами</span>
-          </h1>
+    <div class="out out--no-hero">
+      <section class="contacts">
+        <div class="section-title">
+          <h2 class="title-h2">Контакти</h2>
         </div>
-      </section>
-      <main class="main">
-        <div class="main__title">
-          <h2 class="title-h2">Триденний екскурсійний тур “Зимові Карпати</h2>
-        </div>
-        <div class="sidebar js-sidebar">
-          <div class="sidebar__inner js-sidebar-inner">
-            <div class="sidebar__group">
-              <div class="sidebar__title">
-                <h5 class="title-h5 title-h5--uppercase">Дата туру</h5>
+        <div class="contacts__inner">
+          <div class="contacts__bl">
+            <form class="form">
+              <div class="form__title">
+                <h5 class="title-h5">Замовити дзвінок</h5>
               </div>
-              <div class="sidebar__date">
-                <p>13 січня 23:00 - 21 січня 03:00</p>
-                <div class="sidebar__note">
-                  <span>час виїзду</span>
-                  <span>час приїзду</span>
+              <div class="form__row">
+                <input placeholder="Ваше ім’я" type="text" class="form__input">
+              </div>
+              <div class="form__row">
+                <input placeholder="Номер телефону" type="tel" class="form__input">
+                <small class="form__helper">Введіть ваш номер телефону</small>
+              </div>
+              <div class="form__row">
+                <textarea class="form__textarea" placeholder="Що вас цікавить"></textarea>
+              </div>
+              <button type="submit" class="button">Надіслати</button>
+            </form>
+          </div>
+          <div class="contacts__bl">
+            <div class="address">
+              <div class="address__bl">
+                <b>Наша адреса:</b>
+                <address>м. Вінниця, проспект Коцюбинського, 4, офіс 15 (БЦ "Коцюбинський")</address>
+              </div>
+              <div class="address__bl">
+                <b>Ми на зв’язку:</b>
+                <div class="phone-number">
+                  <a href="tel: +380983615756" class="phone-number__link">+38 (098) 361-57-56</a>
+                </div>
+                <div class="phone-number">
+                  <a href="tel: +380932557395" class="phone-number__link">+38 (093) 255-73-95</a>
                 </div>
               </div>
             </div>
-            <hr>
-            <div class="sidebar__group sidebar__group--more-mb">
-              <div class="sidebar__title">
-                <h5 class="title-h5 title-h5--uppercase">Тривалість туру</h5>
+            <div class="map map--sm">
+              <div class="map__location">
+                <iframe class="map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2604.9415918131044!2d28.505809214908002!3d49.23959658174474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472d5b3eb67f95cb%3A0x97e01e3398395d94!2z0L_RgNC-0YHQvy4g0JrQvtGG0Y7QsdC40L3RgdC60L7Qs9C-LCA0LCDQktC40L3QvdC40YbQsCwg0JLQuNC90L3QuNGG0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAyMTAwMA!5e0!3m2!1sru!2sua!4v1613160644708!5m2!1sru!2sua" width="1440" height="434" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
               </div>
-              <p>3 дні / 2 ночі</p>
             </div>
-            <div class="sidebar__button">
-              <a href="#" class="button button--equal-padding button--full-w">Залишити заявку</a>
+            <div class="contacts__video">
+              <b>Як до нас дістатись:</b>
+              <div class="video">
+                <iframe width="560" height="252" src="https://www.youtube.com/embed/sZ--R6IxHQE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
             </div>
-            <ul class="sidebar__list">
-              <li class="sidebar__option"><a href="#visit" class="sidebar__link is-active js-sidebar-link">Що відвідаємо</a></li>
-              <li class="sidebar__option"><a href="#price" class="sidebar__link js-sidebar-link">Вартість туру</a></li>
-              <li class="sidebar__option"><a href="#program" class="sidebar__link js-sidebar-link">Програма туру</a></li>
-            </ul>
           </div>
         </div>
-        <section class="content content--subtitle-orange">
-          <h2>Триденний екскурсійний тур “Зимові Карпати”</h2>
-          <section id="visit">
-            <div>
-              <h3><span>Що відвідаємо</span></h3>
-              <h4>День 1: Стежки Довбуша</h4>
-              <hr>
-              <div class="time"><b>9:00</b> - прибуття в Яремче, де на нас чекає екскурсія “стежками Довбуша”.</div>
-              <p>На нас чекає піша екскурсія стежками «українського Робін Гуда» Олекси Довбуша. Дізнаємося про звитягу карпатських народних месників опришків та про мужність їхнього провідника Олексу Довбуша. </p>
-              <p>З гірськими воїнами не могло впоратися навіть багатотисячне польське військо, а за голову ватажка призначали нечувані викупи. Про його мужність складали пісні, а скарб Олекси Довбуша, захований в скелях, шукають досі. Проте згубило його... кохання.</p>
-              <figure>
-                <div>
-                  <img src="img/tour/1.jpg" alt="tour 1">
-                </div>
-                <div>
-                  <img src="img/tour/2.jpg" alt="tour 2">
-                </div>
-              </figure>
-              <p>Під час прогулянки дізнаємося не лише про життя повстанців, а й познайомимося з природою Карпат, адже знаходяться стежки Довбуша в Національному Природному Парку.</p>
-            </div>
-            <div>
-              <h4>Сувенірний ринок</h4>
-              <hr>
-              <div class="time"><b>12:00</b> - відвідування сувенірного ринку. Фотографування біля водоспаду Пробій.</div>
-              <p>Родзинкою Яремче є його сувенірний ринок, повз котрий неможливо пройти без покупки на згадку. Народні майстри пропонують вовняні ковдри (ліжники) з традиційним геометричним орнаментом, вишиванки та рушники, вироби з овечих шкур та шерсті, гуцульську кераміку, гуцульські килими, дерев’яне начиння, прикраси з бісеру, ляльки-мотанки, вишиванки та одяг.</p>
-              <p>Можна придбати домашні ласощі, сири бриндзу, вурду і будз, сушені та мариновані гриби, натуральний мед, в'ялену оленину та м'ясо дикого кабана, лікувальні трави, сушені ягоди та фрукти, настоянки та наливки. Від різноманіття очі розбігаються.</p>
-              <figure>
-                <div><img src="img/tour/3.jpg" alt="tour 3"></div>
-              </figure>
-              <figure>
-                <div><img src="img/tour/4.jpg" alt="tour 4"></div>
-                <div><img src="img/tour/5.jpg" alt="tour 5"></div>
-              </figure>
-              <p>Ще однією родзинкою ринку є його локація.</p>
-              <p>По-перше, крізь нього проходить одна з головних водних артерій Карпат – річка Прут. По-друге, саме в цьому місці на річці розташований каскадний водоспад Пробій. Його висота – 8 метрів і найбільш повноводний красень-водоспад у час весняних паводків і рясних осінніх дощів. Взимку часто замерзає, створюючи глибу льоду, котра міріадами крижинок виблискує на сонці.</p>
-              <p>Кажуть, що раніше Пробій був могутнішим, але щоб вільно сплавляти ліс по річці, його підірвали і він став значно нижчим. Зробити селфі на фоні водоспаду можна з містка, або спустившись безпосередньо до самого кам’янистого узбережжя.</p>
-            </div>
-          </section>
-          <section id="price">
-            <div>
-              <h3><span>Вартість туру</span></h3>
-              <p>Вартість туру розрахована на 1 дорослого виїздом з Вінниці. Вартість туру з інших міст уточняйте, будь ласка, у менеджера за телефоном <a href="tel: +380983615756">+38 (098) 361 57 56</a>.</p>
-              <table class="table table--layout-fixed">
-                <thead>
-                  <th class="cell cell--text-left cell--set-w-240">Тип номеру</th>
-                  <th>Бронювання до 01.01.2021</th>
-                  <th>Бронювання з 02.01.2021</th>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="cell cell--text-left cell--with-icon cell--set-w-240"> 4 - місний <div>
-                        <svg class="icon icon-user">
-                          <use xlink:href="img/sprite.svg#icon-user"></use>
-                        </svg>
-                        <span>x 4<span></span>
-                    </td>
-                    <td> 1660 грн </td>
-                    <td> 1750 грн </td>
-                  </tr>
-                  <tr>
-                    <td class="cell cell--text-left cell--with-icon cell--set-w-240"> 3 - місний <div>
-                        <svg class="icon icon-user">
-                          <use xlink:href="img/sprite.svg#icon-user"></use>
-                        </svg>
-                        <span>x 3<span></span>
-                    </td>
-                    <td> 1700 грн </td>
-                    <td> 1800 грн </td>
-                  </tr>
-                  <tr>
-                    <td class="cell cell--text-left cell--with-icon cell--set-w-240"> 2 - місний <div>
-                        <svg class="icon icon-user">
-                          <use xlink:href="img/sprite.svg#icon-user"></use>
-                        </svg>
-                        <span>x 2<span></span>
-                    </td>
-                    <td> 1750 грн </td>
-                    <td> 1850 грн </td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="notes">
-                <p>Діти до 12 років – <b>знижка 10%</b>.</p>
-                <p>Діти до 3 років (з 2 дорослими, без окремого місця в автобусі та ліжка в номері) – <b>безкоштовно</b>.</p>
-              </div>
-              <div class="list-group">
-                <div>
-                  <p><b>У вартість входить:</b></p>
-                  <ul>
-                    <li>проїзд по всьому маршруту автобусом туристичного класу;</li>
-                    <li>страхування від нещасних випадків;</li>
-                    <li>проживання в готелі в номерах зі зручностями 1 ніч;</li>
-                    <li>організаційно-екскурсійний супровід від туристичної компанії.</li>
-                  </ul>
-                </div>
-                <div>
-                  <p><b>Додаткові витрати:</b></p>
-                  <ul>
-                    <li>вхідні квитки на екскурсійні об’єкти;</li>
-                    <li>харчування;</li>
-                    <li>особисті витрати;</li>
-                    <li>додаткові послуги і розваги.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <a href="#" class="button button--full-w button--mob">Залишити заявку</a>
-          </section>
-          <section id="program">
-            <h3><span>Програма туру</span></h3>
-            <div class="collapse js-collapse is-open ">
-              <div class="collapse__bar js-collapse-bar">
-                <h5>15 січня (п’ятниця)</h5>
-              </div>
-              <div class="collapse__content js-collapse-content" style="display: block">
-                <p>23:00 - виїзд з Віниці</p>
-              </div>
-            </div>
-            <div class="collapse js-collapse">
-              <div class="collapse__bar js-collapse-bar">
-                <h5>16 січня (субота)</h5>
-              </div>
-              <div class="collapse__content js-collapse-content">
-                <p>19:00 - стежки Довбуша</p>
-                <p>12:00 - сувенірний ринок</p>
-              </div>
-            </div>
-            <div class="collapse js-collapse">
-              <div class="collapse__bar js-collapse-bar">
-                <h5>17 січня (неділя)</h5>
-              </div>
-              <div class="collapse__content js-collapse-content">
-                <p>08:00 - сніданок</p>
-              </div>
-            </div>
-            <div class="collapse js-collapse">
-              <div class="collapse__bar js-collapse-bar">
-                <h5>18 січня (понеділок)</h5>
-              </div>
-              <div class="collapse__content js-collapse-content">
-                <p>02:00 - прибуття у Вінницю</p>
-              </div>
-            </div>
-            <a href="#" class="button button--uppercase">Схожі тури</a>
-          </section>
-        </section>
-      </main>
+      </section>
     </div>
     <footer class="footer">
       <div class="footer__inner">
@@ -297,24 +160,6 @@
         </div>
       </div>
     </footer>
-    <div class="modal js-modal">
-      <div class="modal__overlay"></div>
-      <div class="modal__block">
-        <div class="modal__inner">
-          <button class="modal__close js-close-modal">
-            <svg class="icon icon-close">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-          <div class="modal__title">
-            <h5 class="title-h5">Тур в Залізний Порт <br> 4 вересня на 5 днів</h5>
-          </div>
-          <p class="modal__subtitle">Вартість на 2-х всього 4100 грн</p>
-          <p class="modal__text">У вартість входить: проїзд автобусом туристичного класу, проживання, страхування!</p>
-          <a href="#" class="button">Дізнатися більше</a>
-        </div>
-      </div>
-    </div>
     <div class="fixed-button js-fixed-button">
       <div class="fixed-button__circle">
         <a href="https://www.facebook.com/More.Vinnytsia/?ref=page_internal" class="fixed-button__social"><i class="fixed-button__icon fixed-button__icon--messenger"></i></a>
@@ -323,11 +168,6 @@
         <a href="viber://chat?number=380983615756" class="fixed-button__social"><i class="fixed-button__icon fixed-button__icon--viber"></i></a>
       </div>
       <div class="fixed-button__text js-fixed-button-circle"><span>Написати нам</span></div>
-    </div>
-    <div class="arrow-up js-scroll-to-top">
-      <svg class="icon icon-caret">
-        <use xlink:href="img/sprite.svg#icon-caret"></use>
-      </svg>
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
