@@ -21,7 +21,7 @@
       {% block content %}{% endblock %}
     </div>
     {% include "../partials/_footer.html" %}
-    {% if modal %} {% include "../partials/_modal.html" %} {% endif %}
+    {% if modal %} {% include "../partials/_modal.html" %} {% elif modalWithForm %} {% include "../partials/_modal-with-form.html" %} {% endif %}
     {% if fixedButton %} {% include "../partials/_fixed-button.html" %} {% endif %}
     {% if arrowUp %} {% include "../partials/_arrow-up.html" %} {% endif %}
     <!-- END content -->

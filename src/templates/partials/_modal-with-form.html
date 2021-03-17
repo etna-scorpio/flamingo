@@ -1,0 +1,23 @@
+<div class="modal modal--center js-modal">
+  <div class="modal__overlay"></div>
+  <div class="modal__block">
+    <div class="modal__inner">
+      <button class="modal__close js-close-modal">{{ mixins.icon('close') }}</button>
+      <p class="modal__subtitle">Залиште, будь ласка, <br> свій номер телефону, щоб наш спеціаліст міг зв'язатися з вами</p>
+      <div class="modal__form">
+        <form class="form form--modal">
+          <div class="form__row">
+            <input placeholder="Ваше ім’я" type="text" class="form__input">
+          </div>
+          <div class="form__row">
+            <input placeholder="Номер телефону" type="tel" class="form__input js-tel" required oninvalid="this.setCustomValidity('Введіть ваш номер телефону')" oninput="this.setCustomValidity('')">
+            <small class="form__helper">Введіть ваш номер телефону</small>
+          </div>
+          <div class="form__button">
+            <button type="submit" class="button">Надіслати</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

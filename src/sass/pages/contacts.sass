@@ -1,5 +1,5 @@
 .contacts
-  max-width: 883px
+  max-width: 1000px
   margin: 0 auto
   padding: 0 15px
   &__inner
@@ -12,6 +12,8 @@
     &:first-child
       margin-right: 55px
       max-width: 350px
+      +r(1024)
+        margin-right: 30px
       +r(767)
         max-width: 400px
         margin: 0 auto 40px
@@ -24,6 +26,11 @@
 
 
 .form
+  &--modal
+    .form__row
+      margin-bottom: 5px
+    .form__button
+      margin-top: 15px
   &__title
     margin-bottom: 25px
   &__row
