@@ -188,7 +188,7 @@
         </div>
       </div>
     </footer>
-    <div class="modal js-modal modal--center">
+    <div class="modal modal--center js-modal">
       <div class="modal__overlay"></div>
       <div class="modal__block">
         <div class="modal__inner">
@@ -197,12 +197,21 @@
               <use xlink:href="img/sprite.svg#icon-close"></use>
             </svg>
           </button>
-          <div class="modal__title">
-            <h5 class="title-h5">Тур в Залізний Порт <br> 4 вересня на 5 днів</h5>
+          <p class="modal__subtitle">Залиште, будь ласка, <br> свій номер телефону, щоб наш спеціаліст міг зв'язатися з вами</p>
+          <div class="modal__form">
+            <form class="form form--modal">
+              <div class="form__row">
+                <input placeholder="Ваше ім’я" type="text" class="form__input">
+              </div>
+              <div class="form__row">
+                <input placeholder="Номер телефону" type="tel" class="form__input js-tel" required oninvalid="this.setCustomValidity('Введіть ваш номер телефону')" oninput="this.setCustomValidity('')">
+                <small class="form__helper">Введіть ваш номер телефону</small>
+              </div>
+              <div class="form__button">
+                <button type="submit" class="button">Надіслати</button>
+              </div>
+            </form>
           </div>
-          <p class="modal__subtitle">Вартість на 2-х всього 4100 грн</p>
-          <p class="modal__text">У вартість входить: проїзд автобусом туристичного класу, проживання, страхування!</p>
-          <a href="#" class="button">Дізнатися більше</a>
         </div>
       </div>
     </div>
