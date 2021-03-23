@@ -8,6 +8,8 @@ import './partials/_collapse';
 import './partials/_sidebar';
 import './partials/_collage-slider';
 import './partials/_overlay-slider';
+import './partials/_testimonials-slider';
+import './partials/_journey-slider';
 import './partials/_mask';
 
 objectFitImages();

@@ -1,0 +1,162 @@
+---
+title: Про нас
+outMod: out--no-hero
+fixedButton: true
+activeHeaderLink: 'Про нас'
+headerClass: header--inner
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+{% set testimonials = [{
+    pic: '1',
+    text: '<p>Поїздка на 2 дні в Закарпаття була дуже насиченою, комфортною, все дуже <span class="testimonials__no-wrap">сподобалося <i class="emoji emoji-smiling-face-with-smiling-eyes"></i></span></p>
+    <p>Рекомендую туристичну компанію <span class="testimonials__no-wrap">"Фламінго" <i class="emoji emoji-thumbs-up"></i><i class="emoji emoji-thumbs-up"></i><i class="emoji emoji-thumbs-up"></i><i class="emoji emoji-thumbs-up"></i><i class="emoji emoji-snowman"></i><i class="emoji emoji-snowflake"></i></span></p>',
+    author: 'Лариса Костишина'
+  },
+  {
+    pic: '2',
+    text: '<p>Фламінго, чудова туристична компанія, з ними дуже весело та комфортно, задоволені, море враження, позитиву та емоції. Рекомендую!!</p>',
+    author: 'Богдан Брижак'
+  },
+  {
+    pic: '3',
+    text: '<p>Чудово провели відпочинок! Все було круто. Організовані та відповідальні!!!</p><p>Дякую за приємні враження <i class="emoji emoji-smiling-face-with-smiling-eyes"></i></p>Рекомендую!!!</p>',
+    author: 'Юлія Олексієнко'
+  },
+  {
+    pic: '4',
+    text: '<p>Професіонали своєї справи. Рекомендую!!!!</p>',
+    author: 'Василина Онищчук'
+  },
+  {
+    avatar: 'a',
+    backgroundColor: '#03B1FC',
+    text: '<p>Заказывали тур, подход к клиентам на высшем уровне. Все организовали быстро и качественно. От поездки остались довольны. Море емоций. Спасибо за вашу работу. Будем советовать всем друзьям и знакомым</p>',
+    author: 'Альона Жадан'
+  },
+  {
+    avatar: 'і',
+    backgroundColor: '#FE7B4D',
+    text: '<p>Ездили в Закарпатье, очень довольный все понравилось.</p>',
+    author: 'Ігор Гаращук'
+  },
+  {
+    avatar: 'л',
+    backgroundColor: '#3CB3E2',
+    text: '<p>Їздила з родиною в Закарпаття. Ми всі просто в захваті від поїзки,дуже насичена і цікава програма,сервіс на високому рівні,екскурсовод Юлічка просто молодчинка! Всім рекомендую тур. агенство "Фламінго". І дякую вам за гарно проведений час та приємні враження!!!</p>',
+    author: 'Людмила Перевертень'
+  }] %}
+
+  <section class="about">
+    <div class="about__title">
+      <div class="section-title"><h2 class="title-h2">Про нас</h2></div>
+    </div>
+    <div class="about__info">
+      <div class="about__pic">
+        <img src="img/about.jpg" alt="about">
+      </div>
+      <div class="about__desc">
+        <p>Ми туристична компанія з Вінниці, яка займається організацією турів Україною. Основні напрямки – чорноморські курорти Коблеве, Залізний Порт, Рибаківка, Карпати, Закарпаття, Буковель, Львів, Чорнобиль.</p>
+        <p>Влітку для вас та вашої сім’ї ми влаштуємо незабутній пляжний відпочинок на найпопулярніших курортах України, восени та навесні пропонуємо безліч екскурсійних турів, взимку запрошуємо до Карпат та на гірськолижні курорти!</p>
+        <p>Також організуємо шкільні екскурсії та корпоративні тури в будь-який куточок України. І все це за помірними цінами та з гарантією якісного сервісу.</p>
+        <p class="about__highlight"><b>Ми дбаємо про комфорт кожного туриста!</b></p>
+      </div>
+    </div>
+    <div class="about__testimonials">
+      <div class="about__subtitle">
+        <h3 class="title-h3"><span>Відгуки наших клієнтів</span></h3>
+      </div>
+      <div class="testimonials">
+        <div class="testimonials__slider js-slider-testimonials">
+          {% for item in testimonials %}
+          <div class="testimonials__bl">
+            <div class="testimonials__el">
+              {% if item.pic %}
+                <div class="testimonials__avatar"><img src="img/testimonials/{{ item.pic }}.jpg" alt="testimonial avatar"></div>
+              {% else %}
+                <div class="testimonials__avatar" style="background-color: {{ item.backgroundColor }}"><span>{{ item.avatar }}</span></div>
+              {% endif %}
+              <div class="testimonials__text">
+                {{ item.text | safe }}
+              </div>
+              <div class="testimonials__author">{{ item.author }}</div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="testimonials__counter js-slider-testimonials-count">
+          <span class="js-slider-testimonials-current-slide">1</span> / <span class="js-slider-testimonials-total-slides"></span>
+        </div>
+      </div>
+    </div>
+    <div class="about__reasons">
+      <div class="about__subtitle">
+        <h3 class="title-h3"><span>Чому варто подорожувати з нами</span></h3>
+      </div>
+
+      {% set reasons = [{
+        title: 'З нами комфортно',
+        text: '<p>Наші автобуси лише туристичного класу: з відкидними сидіннями, обігрівом взимку і кондиціонування влітку. Більше жодних переповнених поїздів і небезпечних задушливих маршруток!</p>
+               <p>Ми також дбаємо, аби проживання під час подорожі було комфортним, тому обираємо лише перевірені готелі.</p>'
+      },
+      {
+        title: 'Безпека - понад усе',
+        text: '<p>Ми несемо відповідальність за кожного туриста від "А" до "Я". Наші туристи застраховані на весь період подорожі, а водії – професіонали з багаторічним досвідом.</p>
+        <p>Впродовж поїздки з вами буде наш співробітник, котрий при потребі допоможе з будь-яким питанням.</p>'
+      },
+      {
+        title: 'З нами цікаво і весело',
+        text: '<p>Супроводжуючий від туристичної компанії не лише досконало знає увесь маршрут, а й намагається зробити вашу мандрівку пізнавальною і веселою. Екскурсії гарантовано залишать у вас позитивні враження і приємні спогади.</p>'
+      },
+      {
+        title: 'До нас повертаються',
+        text: '<p>Більшість наших туристів їздять з нам у подорожі ще і ще. Їм ми надаємо 5% знижки на всі тури. Постійні туристи знають, що ми пропонуємо щораз нові авторські тури, цікаві напрямки та незвичні насичені екскурсії. Клієнтоорієнтованість – це про нас.</p>'
+      },
+      {
+        title: '10 років досвіду',
+        text: '<p>Туристичний оператор "Фламінготур" 10 років на ринку України. Наші представництва є в Черкаській, Вінницькій, Кіровоградській та Київській областях. "Фламінготур" – це комфортні подорожі Україною та світом. Працюємо за ліцензією та маємо безліч сертифікатів і дипломів.</p>'
+      }] %}
+
+      <div class="reasons reasons--title-fucsia">
+        {% for reason in reasons %}
+        <div class="reasons__bl{% if loop.index % 2 === 0 %} reasons__bl--reverse{% endif %}">
+          <div class="reasons__el">
+            <div class="reasons__text">
+              <span class="reasons__num">{{ loop.index }}</span>
+              <div class="reasons__title">
+                <h4 class="title-h4">{{ reason.title }}</h4>
+              </div>
+              {{ reason.text | safe }}
+            </div>
+          </div>
+          <div class="reasons__el reasons__el--pic">
+            <img class="reasons__pic" src="img/reasons/reason-{{ loop.index }}.jpg" alt="reason {{ loop.index }}">
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="about__journey">
+      <div class="about__subtitle">
+        <h3 class="title-h3"><span>Наші подорожі</span></h3>
+      </div>
+      <div class="journey-slider js-journey-slider">
+        {% for i in range(0, 13) %}
+        <div class="journey-slider__bl">
+          <img src="img/journey/{{ loop.index }}.jpg" alt="journey {{ loop.index }}">
+        </div>
+        {% endfor %}
+      </div>
+      <div class="journey-slider-nav js-journey-slider-nav">
+        {% for i in range(0, 13) %}
+        <div class="journey-slider-nav__bl">
+          <div class="journey-slider-nav__el">
+            <img src="img/journey/{{ loop.index }}.jpg" alt="journey {{ loop.index }}">
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+{% endblock %}
