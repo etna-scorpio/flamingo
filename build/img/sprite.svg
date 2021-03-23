@@ -18,7 +18,7 @@
 </symbol><symbol id="icon-checkmark-pink" viewBox="0 0 19 14">
     <path d="M17.591 1L6.123 12 .91 7" stroke-width="2" stroke-miterlimit="10"/>
 </symbol><symbol id="icon-checkmark" viewBox="0 0 24 24">
-    <path clip-rule="evenodd" fill-rule="evenodd" stroke-miterlimit="10" stroke-width="2" d="M20 6L9 17l-5-5"/>
+    <path clip-rule="evenodd" stroke-miterlimit="10" stroke-width="2" d="M20 6L9 17l-5-5"/>
 </symbol><symbol id="icon-chevron" viewBox="0 0 10 16">
     <path d="M8.832 0L10 1.168 3.11 8 10 14.832 8.832 16l-8-8 8-8z"/>
 </symbol><symbol id="icon-clock" viewBox="0 0 32 32">
