@@ -26,11 +26,9 @@
       display: block
       height: auto
       padding: 20px 0 0
-      span
-        display: inline
-        overflow: auto
-        max-width: initial
       p
+        max-height: initial
+        overflow: auto
         &:not(:last-child)
           margin-bottom: 12px
   &__inner
@@ -92,9 +90,8 @@
     height: 60px
     align-items: center
     padding: 5px 14px
-    span
-      display: inline-block
-      max-height: rem(50)
+    p
+      max-height: rem(40)
       overflow: hidden
     +r(767)
       height: auto

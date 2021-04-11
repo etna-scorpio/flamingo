@@ -9,7 +9,7 @@ if ($('.js-scroll-to-top')) {
     if ($(window).scrollTop() > $(window).height() && arrowUp.not(activeClass)) {
       arrowUp.addClass(activeClass);
     } else {
-      console.log('less');
+      // console.log('less');
       arrowUp.removeClass(activeClass);
     }
   });
