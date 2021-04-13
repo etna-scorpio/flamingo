@@ -1,16 +1,17 @@
 import $ from 'jquery';
 import 'slick-carousel';
 
-var slider = $('.js-overlay-slider'),
-  navForSlider = $('.js-overlay-slider-nav'),
-  wrapper = $('.js-overlay-slider-wrapper'),
-  showSliderBtn = $('.js-show-overlay-slider'),
-  hideSliderBtn = $('.js-overlay-slider-close'),
-  activeClass = 'is-visible',
-  path,
-  images;
-
 window.addEventListener('DOMContentLoaded', function() {
+
+  var slider = $('.js-overlay-slider'),
+    navForSlider = $('.js-overlay-slider-nav'),
+    wrapper = $('.js-overlay-slider-wrapper'),
+    showSliderBtn = $('.js-show-overlay-slider'),
+    hideSliderBtn = $('.js-overlay-slider-close'),
+    activeClass = 'is-visible',
+    path,
+    images;
+
 
   function addImagesToSlider(arr) {
     var slideNum;

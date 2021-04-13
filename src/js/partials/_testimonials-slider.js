@@ -1,9 +1,9 @@
 import $ from 'jquery';
 import 'slick-carousel';
 
-var slider = $('.js-slider-testimonials');
-
 window.addEventListener('DOMContentLoaded', function() {
+  var slider = $('.js-slider-testimonials');
+
   slider.slick({
     adaptiveHeight: true
   });

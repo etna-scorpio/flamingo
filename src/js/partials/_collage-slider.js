@@ -1,9 +1,9 @@
 import $ from 'jquery';
 import 'slick-carousel';
 
-var slider = $('.js-mob-slider');
-
 window.addEventListener('DOMContentLoaded', function() {
+  var slider = $('.js-mob-slider');
+
   slider.slick({
     fade: true,
     cssEase: 'linear'

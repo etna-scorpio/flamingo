@@ -193,7 +193,7 @@
           width: auto
       &--with-icon
         position: relative
-        div
+        span
           position: absolute
           top: 50%
           right: 20%
@@ -205,8 +205,6 @@
           vertical-align: middle
           font-size: 17px
           fill: $blue
-        span
-          vertical-align: middle
     + .notes
       margin: -25px 0 40px
       +r(767)
@@ -297,3 +295,13 @@
     + h3
       +r(767)
         margin-top: 30px
+
+.ico-user
+  display: inline-block
+  vertical-align: middle
+  width: 19px
+  height: 19px
+  margin-right: 4px
+  background-image: url(../icons/user.svg)
+  background-size: contain
+  background-repeat: no-repeat

@@ -119,7 +119,7 @@ arrowUp: true
                   <td {% if loop.first %} class="cell cell--text-left cell--with-icon cell--set-w-240" {% endif %}>
                     {{ cell }}
                     {% if loop.first %}
-                      <div>{{ mixins.icon('user') }}<span>x {{ cell | first }}<span></span>
+                      <span><i class="ico ico-user"></i>x {{ cell | first }}</span>
                     {% endif %}
                   </td>
                 {% endfor %}

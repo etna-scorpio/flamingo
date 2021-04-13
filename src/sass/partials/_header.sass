@@ -17,8 +17,6 @@
     .logo svg path
       &:first-child
         fill: $dark-brown
-      &:last-child
-        fill: $pink
     .header__group
       border-top: 1px solid rgba(40, 51, 68, 0.3)
       border-bottom: 1px solid rgba(40,51,68,.3)
@@ -44,8 +42,6 @@
     .logo svg path
       &:first-child
         fill: $dark-brown
-      &:last-child
-        fill: $pink
     .header__group
       padding-top: 3px
       +r(1024)
@@ -93,8 +89,6 @@
     .logo svg path
       &:first-child
         fill: $dark-brown
-      &:last-child
-        fill: $pink
     .header__group
       margin-top: 3px
       +r(1200)
@@ -142,7 +136,6 @@
       display: block
 
 
-
 .logo
   display: block
   max-width: 200px
@@ -156,6 +149,9 @@
     max-width: 120px
   svg
     max-width: 100%
+    path
+      &:last-child
+        fill: $pink
 
 .menu
   display: flex

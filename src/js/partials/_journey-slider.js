@@ -1,10 +1,9 @@
 import $ from 'jquery';
 import 'slick-carousel';
 
-var slider = $('.js-journey-slider'),
-  navForSlider = $('.js-journey-slider-nav');
-
 window.addEventListener('DOMContentLoaded', function() {
+  var slider = $('.js-journey-slider'),
+    navForSlider = $('.js-journey-slider-nav');
 
   slider.slick({
     fade: true,
