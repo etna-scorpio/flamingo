@@ -59,3 +59,46 @@ body
     padding: 13px
   &--full-w
     width: 100%
+  &.alm-load-more-btn
+    font-size: rem(16)
+    &.loading
+      background: transparent
+      font-size: 0
+      &:after
+        display: none
+      &:before
+        content: ""
+        display: block
+        width: 40px
+        height: 40px
+        margin: 0 auto
+        background-image: url(../img/g.png)
+        background-repeat: no-repeat
+        background-size: contain
+        animation: rotate_g 1.4s linear infinite
+        will-change: transform
+        +r(1024)
+          width: 30px
+          height: 30px
+          animation-duration: 1.1s
+    &.done
+      display: none
+
+.alm-btn-wrap
+  text-align: center
+
+.alm-listing.alm-ajax
+  &:not(:empty)
+    margin-bottom: -80px
+    +r(1024)
+      margin-bottom: -50px
+    + .alm-btn-wrap .button:not(.done)
+      margin-top: 80px
+      +r(1024)
+        margin-top: 50px
+
+@keyframes rotate_g
+  from
+    +rotate(360)
+  to
+    +rotate(0)

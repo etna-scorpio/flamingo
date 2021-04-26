@@ -22,15 +22,15 @@ arrowUp: true
   </div>
   <div class="sidebar js-sidebar">
     <div class="sidebar__inner js-sidebar-inner">
-      <ul class="sidebar__list">
-        <li class="sidebar__option"><a href="#desc" class="sidebar__link is-active js-sidebar-link">Опис бази відпочинку</a></li>
-        <li class="sidebar__option"><a href="#room" class="sidebar__link js-sidebar-link">Категорії номерів</a></li>
-        <li class="sidebar__option"><a href="#catering" class="sidebar__link js-sidebar-link">Харчування</a></li>
-        <li class="sidebar__option"><a href="#schedule" class="sidebar__link js-sidebar-link">Дати виїздів</a></li>
-        <li class="sidebar__option"><a href="#transport" class="sidebar__link js-sidebar-link">Транспорт</a></li>
+      <ul class="sidebar-list js-sidebar-list">
+        <li><a href="#desc">Опис бази відпочинку</a></li>
+        <li><a href="#room">Категорії номерів</a></li>
+        <li><a href="#catering">Харчування</a></li>
+        <li><a href="#schedule">Дати виїздів</a></li>
+        <li><a href="#transport">Транспорт</a></li>
       </ul>
       <div class="sidebar__button">
-        <a href="#" class="button button--equal-padding button--full-w">Залишити заявку</a>
+        <a href="#" class="button button--equal-padding button--full-w js-show-popup-contact-form">Залишити заявку</a>
       </div>
     </div>
   </div>
@@ -45,33 +45,33 @@ arrowUp: true
         <div class="collage js-collage">
           <div class="collage__row collage__row--three-pics">
             <div class="collage__bl">
-              <div class="collage__el js-show-overlay-slider"><img src="img/tour-2/1.jpg" alt="tour 2"></div>
+              <div class="collage__el"><img src="img/tour-2/1.jpg" alt="tour 2"></div>
             </div>
             <div class="collage__bl">
-              <div class="collage__el js-show-overlay-slider"><img src="img/tour-2/2.jpg" alt="tour 2"></div>
-              <div class="collage__el js-show-overlay-slider"><img src="img/tour-2/3.jpg" alt="tour 2"></div>
+              <div class="collage__el"><img src="img/tour-2/2.jpg" alt="tour 2"></div>
+              <div class="collage__el"><img src="img/tour-2/3.jpg" alt="tour 2"></div>
             </div>
           </div>
           <div class="collage__row">
             <div class="collage__bl">
-              <div class="collage__el js-show-overlay-slider"><img src="img/tour-2/4.jpg" alt="4"></div>
-              <div class="collage__el js-show-overlay-slider"><img src="img/tour-2/5.jpg" alt="5"></div>
-              <div class="collage__el js-show-overlay-slider"><img src="img/tour-2/6.jpg" alt="6"></div>
-              <div class="collage__el js-show-overlay-slider">
+              <div class="collage__el"><img src="img/tour-2/4.jpg" alt="4"></div>
+              <div class="collage__el"><img src="img/tour-2/5.jpg" alt="5"></div>
+              <div class="collage__el"><img src="img/tour-2/6.jpg" alt="6"></div>
+              <div class="collage__el">
                 <img src="img/tour-2/7.jpg" alt="7">
                 <div class="collage__num"><span>+</span>2 фото</div>
               </div>
             </div>
           </div>
-          <div class="collage__slider-mob">
-            <div class="js-mob-slider">
-              {% for i in range(1, 8) %}
-                <img src="img/tour-2/{{ i }}.jpg" alt="tour 2">
-              {% endfor %}
-            </div>
-            <div class="collage__slider-count js-mob-slider-count">
-              <span class="js-mob-slider-current-slide">1</span> / <span class="js-mob-slider-total-slides"></span>
-            </div>
+        </div>
+        <div class="mobile-slider js-mob-slider-wrapper">
+          <div class="rss-innerpage-slider-wapp">
+            {% for i in range(1, 8) %}
+              <img src="img/tour-2/{{ i }}.jpg" alt="tour 2">
+            {% endfor %}
+          </div>
+          <div class="mobile-slider__count js-mob-slider-count">
+            <span class="js-mob-slider-current-slide">1</span> / <span class="js-mob-slider-total-slides"></span>
           </div>
         </div>
       </div>
@@ -81,27 +81,27 @@ arrowUp: true
         <h3><span>Номер "економ"</span></h3>
         <p>Комплектація номера: у номері є всі необхідні меблі, постіль на ліжках. Туалет і душ – спільний на території. Користування басейном та кухнею безкоштовне.</p>
         <p>Номери "економ" є 2-х, 3-х і 4-місні.</p>
-        <div class="collage js-collage">
+        <div class="collage js-show-overlay-slider">
           <div class="collage__row collage__row--three-pics">
             <div class="collage__bl">
-              <div class="collage__el js-show-overlay-slider"><img src="img/tour-2/10.jpg" alt="tour 2"></div>
+              <div class="collage__el"><img src="img/tour-2/10.jpg" alt="tour 2"></div>
             </div>
             <div class="collage__bl">
-              <div class="collage__el js-show-overlay-slider"><img src="img/tour-2/11.jpg" alt="tour 2"></div>
-              <div class="collage__el js-show-overlay-slider"><img src="img/tour-2/12.jpg" alt="tour 2">
+              <div class="collage__el"><img src="img/tour-2/11.jpg" alt="tour 2"></div>
+              <div class="collage__el"><img src="img/tour-2/12.jpg" alt="tour 2">
                 <div class="collage__num">+ 1 фото</div>
               </div>
             </div>
           </div>
-          <div class="collage__slider-mob">
-            <div class="js-mob-slider">
-              <img src="img/tour-2/10.jpg" alt="tour 2">
-              <img src="img/tour-2/11.jpg" alt="tour 2">
-              <img src="img/tour-2/12.jpg" alt="tour 2">
-            </div>
-            <div class="collage__slider-count js-mob-slider-count">
-              <span class="js-mob-slider-current-slide">1</span> / <span class="js-mob-slider-total-slides"></span>
-            </div>
+        </div>
+        <div class="mobile-slider js-mob-slider-wrapper">
+          <div class="rss-innerpage-slider-wapp">
+            <img src="img/tour-2/10.jpg" alt="tour 2">
+            <img src="img/tour-2/11.jpg" alt="tour 2">
+            <img src="img/tour-2/12.jpg" alt="tour 2">
+          </div>
+          <div class="mobile-slider__count js-mob-slider-count">
+            <span class="js-mob-slider-current-slide">1</span> / <span class="js-mob-slider-total-slides"></span>
           </div>
         </div>
       </div>
@@ -205,7 +205,7 @@ arrowUp: true
           </div>
         </div>
       </div>
-      <a href="#" class="button button--full-w button--mob">Залишити заявку</a>
+      <a href="#" class="button button--full-w button--mob js-show-popup-contact-form">Залишити заявку</a>
     </section>
     <section id="catering">
       <div>
@@ -253,7 +253,7 @@ arrowUp: true
           </table>
         </div>
         {% endfor %}
-        <a href="#" class="button button--full-w button--mob">Залишити заявку</a>
+        <a href="#" class="button button--full-w button--mob js-show-popup-contact-form">Залишити заявку</a>
         <h3><span>Маршрут</span><small>(час виїзду із інших міст)</small></h3>
         <h5 class="title-h5 title-h5--center title-h5--tablet">Напрямок Вінниця - Коблево</h5>
         <div class="route">

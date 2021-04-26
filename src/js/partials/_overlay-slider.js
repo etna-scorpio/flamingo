@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded', function() {
   var slider = $('.js-overlay-slider'),
     navForSlider = $('.js-overlay-slider-nav'),
     wrapper = $('.js-overlay-slider-wrapper'),
-    showSliderBtn = $('.js-show-overlay-slider'),
+    showSliderBtn = $('.js-show-overlay-slider .wp-block-image'),
     hideSliderBtn = $('.js-overlay-slider-close'),
     activeClass = 'is-visible',
     path,
@@ -42,8 +42,8 @@ window.addEventListener('DOMContentLoaded', function() {
       slidesToScroll: 1,
       asNavFor: '.js-overlay-slider',
       arrows: false,
-      centerMode: true,
       focusOnSelect: true,
+      centerMode: true,
       infinite: true
     });
 
@@ -58,7 +58,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
   function showSlider() {
     path = $(this).find('img').attr('src');
-    images = $(this).closest('.js-collage').find('.collage__row img');
+    images = $(this).closest('.js-show-overlay-slider').find('img');
 
     $('body').css('overflow', 'hidden');
     wrapper.addClass(activeClass);

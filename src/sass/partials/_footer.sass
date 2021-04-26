@@ -96,7 +96,7 @@
     vertical-align: -5px
     font-size: 20px
 
-.social
+.soc
   display: flex
   +r(767)
     margin-bottom: 5px
@@ -105,16 +105,9 @@
     width: 30px
     height: 30px
     margin-right: 15px
-    background-size: contain
+    object-fit: contain
+    font-size: 'object-fit: contain'
     transition: transform 0.2s ease
     will-change: transform
     &:hover
       transform: translateY(-3px)
-    &--messenger
-      background-image: url(../icons/messenger.svg)
-    &--instagram
-      background-image: url(../icons/instagram.svg)
-    &--telegram
-      background-image: url(../icons/telegram.svg)
-    &--viber
-      background-image: url(../icons/viber.svg)

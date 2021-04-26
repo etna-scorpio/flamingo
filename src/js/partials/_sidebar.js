@@ -7,7 +7,8 @@ window.addEventListener('DOMContentLoaded', function() {
     var sidebar = $('.js-sidebar'),
       sidebarInner = $('.js-sidebar-inner'),
       sidebarInnerHeight = sidebarInner.outerHeight(),
-      sidebarLink = $('.js-sidebar-link'),
+      sidebarList = $('.js-sidebar-list'),
+      sidebarLink = sidebarList.find('a'),
       section,
       header = $('.js-header'),
       headerHeight = Math.round(header.outerHeight()),
@@ -16,20 +17,26 @@ window.addEventListener('DOMContentLoaded', function() {
       sidebarTop,
       stopPoint;
 
+    function setActiveNavLink() {
+      sidebarLink.first().addClass('is-active');
+    }
+
     function scrollToSection(e) {
       e.preventDefault();
 
       sidebarLink.removeClass('is-active');
-      $(this).addClass('is-active');
+      $(e.currentTarget).addClass('is-active');
 
-      section = $(this).attr('href');
+      section = $(e.currentTarget).attr('href');
 
       $('html, body').animate({
         scrollTop: $(section).offset().top - headerHeight - spacing
       });
     };
 
-    sidebarLink.click(scrollToSection);
+    sidebarLink.each(function() {
+      $(this).click(function(e) { scrollToSection(e); });
+    });
 
     function checkHeaderVisibility() {
       if (header.hasClass('is-desktop-scroll')) {
@@ -64,6 +71,7 @@ window.addEventListener('DOMContentLoaded', function() {
       }
     }
 
+    setActiveNavLink();
     checkHeaderVisibility();
     moveSidebarOnScroll();
 

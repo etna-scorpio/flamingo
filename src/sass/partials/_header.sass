@@ -63,6 +63,11 @@
     .language
       &:before
         background: #fff
+    .menu .menu__link
+      &:hover,
+      &:focus,
+      &--active
+        color: $blue
   &--accent-yellow
     .menu .menu__link
       &:hover,
@@ -75,6 +80,18 @@
       &:hover,
       &.is-active
         color: $yellow
+  &--accent-pink
+    .menu .menu__link
+      &:hover,
+      &:focus,
+      &--active
+        color: $pink
+      &:before
+        background: $pink
+    .language .language__switch
+      &:hover,
+      &.is-active
+        color: $pink
   &.is-desktop-scroll
     position: fixed
     padding-top: 20px

@@ -6,6 +6,8 @@
       margin: 0 -3px
     +r(767)
       display: none
+    &--hidden
+      display: none
     &--three-pics
       .collage__bl
         display: flex
@@ -65,30 +67,23 @@
     font-size: rem(35)
     color: #fff
     user-select: none
-    cursor: pointer
     +r(1200)
       font-size: rem(30)
     +r(1024)
       font-size: rem(20)
     span
       margin: 3px 5px 0 0
-  &__slider-mob
-    position: relative
-    display: none
-    margin: 0 -15px
-    +r(767)
-      display: block
-    img
-      max-height: 350px
-      object-fit: cover
-      font-size: 'object-fit: cover'
-  &__slider-count
-    position: absolute
-    right: 10px
-    bottom: 10px
-    padding: 10px 20px
-    color: #fff
-    background: rgba($black, 0.6)
+
+.mobile-slider
+  position: relative
+  display: none
+  margin: 0 -15px
+  +r(767)
+    display: block
+  img
+    max-height: 350px
+    object-fit: cover
+    font-size: 'object-fit: cover'
   .slick-arrow
     position: absolute
     z-index: 1
@@ -112,14 +107,103 @@
     &:hover,
     &:focus
       background: #fff
-  .slick-prev
+  .slick-prev,
+  .slickprev
     left: 0
     &:before
       margin-left: -6px
-  .slick-next
+  .slick-next,
+  .slicknext
     right: 0
     &:before
-      margin-top: -8px
+      margin-top: -9px
       margin-left: -3px
       +rotate(180)
+  &__count
+    position: absolute
+    right: 10px
+    bottom: 10px
+    padding: 10px 20px
+    color: #fff
+    background: rgba($black, 0.6)
 
+
+// Additional styles for collage gallery in Wordpress
+.wp-block-collage
+  margin: 30px 0
+  flex-wrap: nowrap
+  +r(767)
+    margin: 0 -18px 30px
+  &.js-show-overlay-slider
+    +r(767)
+      display: none
+    .wp-block-image
+      cursor: pointer
+  + section[id]
+    margin-top: 65px
+  .wp-block-columns
+    margin: 0 -5px
+    flex-wrap: nowrap
+    +r(1024)
+      margin: 0 -3px
+    &:not(.wp-block-columns--three-pics)
+      .wp-block-column
+        &:nth-last-child(n+2),
+        &:nth-last-child(n+2) ~ .wp-block-column
+          .wp-block-image
+            padding-bottom: 85%
+        &:nth-last-child(n+3),
+        &:nth-last-child(n+3) ~ .wp-block-column
+          .wp-block-image
+            padding-bottom: 100%
+  .wp-block-columns--three-pics
+    .wp-block-column
+      &:first-child
+        .wp-block-image
+          height: calc(100% - 10px)
+          padding-bottom: initial
+          +r(1024)
+            height: calc(100% - 6px)
+    .wp-block-image
+      min-height: 120px
+      padding-bottom: 44.724%
+  .wp-block-column
+    position: relative
+    margin: 0 5px
+    +r(1024)
+      margin: 0 3px
+    &:not(:first-child)
+      margin: 0 5px
+      +r(1024)
+        margin: 0 3px
+    &:not(:only-child)
+      flex-basis: 50%
+  .wp-block-image
+    position: relative
+    margin: 0 0 10px
+    padding-bottom: 50%
+    +r(1024)
+      margin-bottom: 6px
+
+@media (min-width: 600px) and (max-width: 781px)
+  .wp-block-collage .wp-block-column:not(:only-child)
+    flex-basis: 50% !important
+
+.wp-collage-more
+  figcaption
+    @extend .collage__num
+    margin: 0
+
+.wp-collage-hidden
+  display: none
+
+// Styles for Responsive Slick slider plugin on Wordpress
+.mobile-slider
+  .slick-list
+    z-index: initial
+  .rss-inner-page-slider-1,
+  .slick-list,
+  .slick-slide
+    min-height: 200px
+  .slick-slide div
+    height: 100%

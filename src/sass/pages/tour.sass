@@ -19,6 +19,7 @@
 
 .content
   flex-basis: 100%
+  min-height: 450px
   &.content--subtitle-orange
     h4
       color: #FE7B4D
@@ -37,6 +38,11 @@
           margin-bottom: 0
         +r(767)
           margin-bottom: 40px
+    + .wp-block-collage
+      margin-top: -35px
+      +r(767)
+        margin-top: -10px
+        margin-bottom: 25px
   h2, h3, h4, h5
     +ib
   h2
@@ -142,6 +148,8 @@
       margin-top: -30px
       +r(767)
         margin-top: -34px
+    &.wp-block-image img
+      width: 100%
   a[href^="tel:"]
     text-decoration: none
     font-size: rem(20)
@@ -180,10 +188,12 @@
       padding: 5px
       +proxima-sb
       background: $yellow
+      text-align: center
     .cell
       &--text-left
         text-align: left
       &--set-w-240
+        position: relative
         width: 240px
         +r(1024)
           width: auto
@@ -191,24 +201,18 @@
         width: 120px
         +r(767)
           width: auto
-      &--with-icon
-        position: relative
-        span
-          position: absolute
-          top: 50%
-          right: 20%
-          color: $blue
-          transform: translateY(-50%)
-          +r(1024)
-            display: none
-        svg
-          vertical-align: middle
-          font-size: 17px
-          fill: $blue
     + .notes
       margin: -25px 0 40px
       +r(767)
         margin: -10px 0 27px
+    .table__icon
+      position: absolute
+      top: 50%
+      right: 20%
+      color: $blue
+      transform: translateY(-50%)
+      +r(1024)
+        display: none
   .time
     position: relative
     margin-bottom: 25px

@@ -43,7 +43,7 @@
             <span class="language__switch is-active">Укр</span>
           </div>
           <div class="header__button">
-            <a href="#" class="button button--sm">Залишити заявку</a>
+            <a href="#" class="button button--sm js-show-popup-contact-form">Залишити заявку</a>
           </div>
         </div>
       </div>
@@ -146,11 +146,11 @@
               </a>
             </li>
           </ul>
-          <div class="social">
-            <a href="https://www.facebook.com/More.Vinnytsia/?ref=page_internal"><i class="social__icon social__icon--messenger"></i></a>
-            <a href="https://www.instagram.com/flamingovinnitsia/"><i class="social__icon social__icon--instagram"></i></a>
-            <a href="tg://resolve?domain=flamingovn"><i class="social__icon social__icon--telegram"></i></a>
-            <a href="viber://chat?number=380983615756"><i class="social__icon social__icon--viber"></i></a>
+          <div class="soc">
+            <a href="https://www.facebook.com/More.Vinnytsia/?ref=page_internal"><img class="soc__icon" src="icons/messenger.svg" alt=""></a>
+            <a href="https://www.instagram.com/flamingovinnitsia/"><img class="soc__icon" src="icons/instagram.svg" alt=""></a>
+            <a href="tg://resolve?domain=flamingovn"><img class="soc__icon" src="icons/telegram.svg" alt=""></a>
+            <a href="viber://chat?number=380983615756"><img class="soc__icon" src="icons/viber.svg" alt=""></a>
           </div>
         </div>
         <div class="footer__group">
@@ -170,6 +170,33 @@
         </div>
       </div>
     </footer>
+    <div class="modal modal--center js-popup-contact-form">
+      <div class="modal__overlay"></div>
+      <div class="modal__block">
+        <div class="modal__inner">
+          <button class="modal__close js-close-popup-contact-form">
+            <svg class="icon icon-close">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+          <p class="modal__subtitle">Залиште, будь ласка, <br> свій номер телефону, щоб наш спеціаліст міг зв'язатися з вами</p>
+          <div class="modal__form">
+            <form class="form form--modal">
+              <div class="form__row">
+                <input placeholder="Ваше ім’я" type="text" class="form__input">
+              </div>
+              <div class="form__row">
+                <input placeholder="Номер телефону" type="tel" class="form__input js-tel" required oninvalid="this.setCustomValidity('Введіть ваш номер телефону')" oninput="this.setCustomValidity('')">
+                <small class="form__helper">Введіть ваш номер телефону</small>
+              </div>
+              <div class="form__button">
+                <button type="submit" class="button">Надіслати</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="fixed-button js-fixed-button">
       <div class="fixed-button__circle">
         <a href="https://www.facebook.com/More.Vinnytsia/?ref=page_internal" class="fixed-button__social"><i class="fixed-button__icon fixed-button__icon--messenger"></i></a>

@@ -43,35 +43,40 @@
     +r(767)
       max-width: 320px
       padding-right: 0
-  &__list
-    max-width: 218px
-    margin: 0 auto
-    padding-right: 18px
-    + .sidebar__button
-      margin-top: 30px
-    +r(767)
-      max-width: 320px
-      padding-right: 0
-  &__option
-    margin-bottom: 7px
-    &:last-child
-      margin-bottom: 0
-  &__link
-    display: block
-    padding: 7px 11px
-    text-decoration: none
-    text-align: left
-    +proxima-sb
-    color: $black
-    border: 1px solid $blue
-    border-radius: 5px
-    &:hover,
-    &:focus,
-    &.is-active
-      background: $blue
-      color: #fff
   hr
     margin: 25px auto 35px
     width: 74px
     border: 0
     border-bottom: 3px solid $yellow
+
+
+.sidebar-list
+  max-width: 218px
+  margin: 0 auto
+  padding-right: 18px
+  + .sidebar__button
+    margin-top: 30px
+  +r(767)
+    max-width: 320px
+    padding-right: 0
+  li
+    margin-bottom: 7px
+    &:last-child
+      margin-bottom: 0
+    a
+      display: block
+      padding: 7px 11px
+      text-decoration: none
+      text-align: left
+      +proxima-sb
+      color: $black
+      border: 1px solid $blue
+      border-radius: 5px
+      &:hover,
+      &:focus,
+      &.is-active
+        background: $blue
+        color: #fff
+
+.sidebar-widget + .sidebar__button
+  margin-top: 30px

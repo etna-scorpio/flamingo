@@ -135,6 +135,39 @@
       right: 0
 
 
+// Styled for Wordpress
+.testimonials
+  &.wp-block-columns
+    margin: 0 auto 65px
+  .wp-block-media-text
+    &__media
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 150px
+      height: 150px
+      margin: 0 auto 35px
+      border-radius: 50%
+      overflow: hidden
+      +r(1024)
+        width: 120px
+        height: 120px
+      img
+        width: 100%
+        height: 100%
+        border-radius: 50%
+        object-fit: cover
+    &__content
+      max-width: 690px
+      text-align: center
+      margin: 0 auto
+      padding: 0
+  .wp-block-quote
+    cite
+      display: block
+      margin-top: 20px
+      font-size: rem(17)
+
 .emoji
   display: inline-block
   width: 20px
@@ -229,12 +262,13 @@
   padding: 0 5%
   margin: 0 auto 20px
   +r(767)
+    max-width: 650px
     margin-bottom: 10px
     padding: 0
   &__bl
     height: 400px
     +r(767)
-      height: 250px
+      height: 300px
     img
       display: block
       width: 100%
@@ -309,6 +343,39 @@
     +r(767)
       width: 95px
       height: 95px
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      font-size: 'object-fit: cover'
+
+// Styled for Wordpress
+.journey-slider
+  .wp-block-image
+    height: 400px
+    margin-bottom: 0
+    +r(767)
+      height: 250px
+    img
+      display: block
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: 50% 50%
+      font-size: 'object-fit: cover; object-position: 50% 50%'
+
+.journey-slider-nav
+  .wp-block-image
+    position: relative
+    width: 125px
+    height: 125px
+    cursor: pointer
+    padding: 0 7px
+    margin-bottom: 0
+    +r(767)
+      width: 90px
+      height: 90px
+      padding: 0 3px
     img
       width: 100%
       height: 100%

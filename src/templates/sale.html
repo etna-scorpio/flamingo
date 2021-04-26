@@ -1,7 +1,6 @@
 ---
 title: Акції
 outMod: out--no-hero
-modalWithForm: true
 fixedButton: true
 headerClass: header--inner
 ---
@@ -46,7 +45,7 @@ headerClass: header--inner
               {{ item.cardDescription | safe }}
               <div class="card__button">
                 {% if loop.index % 2 %}
-                <a href="#" class="button js-show-modal">Скористатись зараз</a>
+                <a href="#" class="button js-show-popup-contact-form">Скористатись зараз</a>
                 {% else %}
                 <a href="https://etna-scorpio.github.io/flamingo/tour.html" class="button">Дізнатись більше</a>
                 {% endif %}

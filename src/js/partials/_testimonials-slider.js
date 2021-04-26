@@ -3,13 +3,14 @@ import 'slick-carousel';
 
 window.addEventListener('DOMContentLoaded', function() {
   var slider = $('.js-slider-testimonials');
+  var wrapper = $('.js-testimonials');
 
   slider.slick({
     adaptiveHeight: true
   });
 
   slider.each(function(index, el) {
-    var counter = $(this).siblings('.js-slider-testimonials-count');
+    var counter = $(this).parents(wrapper);
     var currentSlideNum = counter.find('.js-slider-testimonials-current-slide')[0];
     var totalSlidesNum = counter.find('.js-slider-testimonials-total-slides')[0];
 
